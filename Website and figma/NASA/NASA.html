@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA</title>
+  <link rel="icon" href="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navg {
+      background-color: black;
+      height: 700px;
+    }
+
+    .navbar-dark {
+      background-color: black;
+      padding: 16px 25px;
+    }
+
+    .navbar-nav .nav-link {
+      color: white;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #dc3545;
+    }
+
+    .ratio-16x9 iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .main-content {
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .featured-news {
+      padding: 20px;
+    }
+
+
+
+    h1 {
+      font-size: medium;
+      color: black;
+    }
+
+    .box {
+      border: 1px solid #dee2e6;
+      padding: 20px;
+      margin-bottom: 10px;
+      background-color: #e4e5e6;
+    }
+
+    .box-large {
+      height: 470px;
+      background-image: url(https://science.nasa.gov/wp-content/uploads/2024/11/hotneptune-1280c.jpeg);
+      background-size: cover;
+      font-size: x-large;
+      font-weight: bold;
+    }
+
+    .box-small {
+      height: 230px;
+      background-image: url(https://www.nasa.gov/wp-content/uploads/2024/11/1-pia26443-spacecraft-illustration.jpg?resize=1024,576);
+      background-size: cover;
+      font-size: x-large;
+      font-weight: bold;
+
+    }
+
+    .box-smaller {
+      height: 230px;
+      background-image: url(https://science.nasa.gov/wp-content/uploads/2024/11/sanaa-oli-20240608-1440.jpg);
+      background-size: cover;
+      font-size: x-large;
+      font-weight: bold;
+
+    }
+
+    .box-larger {
+      height: 470px;
+      background-image: url(https://www.nasa.gov/wp-content/uploads/2024/11/iss072e186870.jpg?resize=1200,800);
+      background-size: cover;
+      font-size: x-large;
+      font-weight: bold;
+
+    }
+
+
+    /* Box styles */
+    .box-msmall,
+    .box-msmaller {
+      height: 180px;
+      /* Set height */
+      aspect-ratio: 1;
+      /* Ensures the box has equal width and height */
+      background-size: cover;
+      background-position: center;
+      font-size: large;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 10px;
+    }
+
+    /* Larger box */
+    .box-mlarger {
+      height: 360px;
+      /* Set a larger height for the larger box */
+      background-size: cover;
+      background-position: center;
+      font-size: x-large;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 15px;
+    }
+
+    /* Images for smaller boxes */
+
+
+    .Thanksgiving {
+      font-weight: 900;
+      /* Makes the text bold */
+      font-size: 40px;
+      color: #ffffff;
+      /* Sets the font size to 30px */
+    }
+
+    .part {
+      color: rgb(0, 0, 0);
+      padding: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      height: 130px;
+      /* Set consistent height for all parts */
+      border: 1px solid #ddd;
+      /* Optional: Add border for visual clarity */
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .part img {
+      width: 120px;
+      height: 120px;
+      /* Set consistent height */
+      border-radius: 50%;
+      /* Make the image circular */
+      object-fit: cover;
+      /* Ensure the image fills the container without distortion */
+      margin-right: 15px;
+      /* Space between the image and text */
+    }
+
+    .part div {
+      flex-grow: 1;
+    }
+
+    .part h5 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    .part p {
+      font-size: 0.875rem;
+      font-weight: 900;
+    }
+
+
+    .card {
+      min-height: 450px;
+      /* Increase the height of the card */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-color: transparent;
+      border: none;
+    }
+
+    .card img {
+      display: none;
+    }
+
+    .card-body {
+      background-color: rgba(0, 0, 0, 0.5);
+      /* Dark background for text visibility */
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .card {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 40px;
+    }
+
+    .discover-more {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-weight: bold;
+    }
+
+    .newimg {
+      background-image: url(https://plus.nasa.gov/wp-content/uploads/2024/11/nasa-holiday-fireplace-key-art-r1-horizontal-program-tile-16-9-without-title.jpg?w=1024);
+    }
+
+    .finder {
+      font-size: 30px;
+      font-weight: 900;
+      color: #ddd;
+    }
+
+    .bg-space {
+      background: url('https://www.nasa.gov/wp-content/uploads/2023/01/webb-tarantula-neb.png?resize=1200,937') no-repeat center center/cover;
+      height: 74vh;
+      color: white;
+    }
+
+    .huge {
+      color: rgb(0, 0, 0);
+      font-size: 50px;
+    }
+
+    .swt {
+      color: white;
+    }
+
+    .sgt {
+      color: rgb(121, 121, 121);
+    }
+
+    .litr{
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .bt {
+      font-size: 40px;
+      font-weight: 800;
+    }
+
+    .bwt{
+      font-size: 48px;
+    }
+
+    .wuf{
+      font-size: 60px ;
+    }
+
+
+    .bst {
+      font-size: 70px;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+    }
+
+    .image-of-the-day {
+      background-color: #f8f9fa;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+
+    .image-of-the-day img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .gallery-title {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+
+
+
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer h5 {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .footer .social-icons a {
+      margin-right: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .footer .divider {
+      border-top: 1px solid #444;
+      margin: 1.5rem 0;
+    }
+
+
+    .footer {
+      padding: 20px;
+      background-color: #000;
+      font-size: 14px;
+      padding: 2rem;
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .footer-column a {
+      color: #fff;
+      text-decoration: none;
+      margin: 2px 0;
+    }
+
+    .footer-column a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-info {
+      margin-top: 10px;
+    }
+
+    .footer-info span {
+      display: block;
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      h1,
+      h5 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- Navbar start -->
+    <div class="navg">
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+          <a class="navbar-brand" href="#">Explore</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <form class="d-flex me-auto">
+              <input class="form-control bg-dark text-white border-0" type="search" placeholder="Search..."
+                aria-label="Search">
+            </form>
+
+            <div class="logo"><img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" alt="">
+            </div>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+
+
+                  News & Events
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  mulitimidea
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Nasa+ <span class="badge bg-danger">LIVE</span></a>
+              </li>
+
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+              </li>
+
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Main Content -->
+      <!-- Main Content -->
+      <div class="container-fluid  mt-5">
+        <div class="row">
+          <!-- Left Column: Text content -->
+          <div class="col-lg-5 Hello">
+            <h6 class="text-uppercase sgt">Featured Video</h6>
+            <span class="Thanksgiving">Thanksgiving on the Space Station</span>
+            <p class="swt">
+              Aboard the International Space Station, NASA Expedition 72 crew members Suni
+              <br> Williams, Nick Hague, Butch
+              Wilmore, and Don Pettit wish a happy Thanksgiving to<br> Earth. The crew share their thoughts on the
+              holiday, as
+              well as their plans<br> for their Thanksgiving meal.
+            </p>
+            <a href="#" class="text-decoration-none text-danger swt">Expedition 72 &rarr;</a>
+          </div>
+          <!-- Right Column: Video -->
+          <div class="col-lg-6">
+            <div class="ratio ratio-16x9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/PQWc9r8Y-mk?si=BZGfhGjv2c8GwM-S"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container-fluid mt-9">
+      <h1 class="bt">Featured News</h1>
+      <div class="row featured-news ">
+        <!-- First column: 2 boxes (one on top, one on bottom) -->
+        <div class="col-md-5">
+          <div class="box box-larger swt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, deserunt?
+          </div>
+        </div>
+        <!-- Second column: 1 normal-sized box with smaller width -->
+        <div class="col-md-3">
+          <div class="box box-large swt">
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+          </div>
+        </div>
+
+        <!-- Third column: 2 boxes (one on top, one on bottom) -->
+        <div class="col-md-4">
+          <div class="box box-small swt">
+            Lorem ipsum dolor sit amet.
+          </div>
+          <div class="box box-smaller swt">
+            Lorem ipsum dolor sit amet.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid my-5">
+      <div class="row">
+        <!-- First Part -->
+        <div class="col-md-3 part d-flex">
+          <img
+            src="https://assets.science.nasa.gov/dynamicimage/assets/science/missions/xrism/News/2024/cygnus-x-3/Cyg_X-3_illustration_AC.jpg"
+            alt="Image 1" class="img-fluid">
+          <div>
+            <h5>Lorem.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+          </div>
+        </div>
+
+        <!-- Second Part -->
+        <div class="col-md-3 part d-flex">
+          <img src="https://science.nasa.gov/wp-content/uploads/2024/11/webb-stsci-01jcgz71j2wy7vrn04ypbyb5x4-2k.png"
+            alt="Image 2" class="img-fluid">
+          <div>
+            <h5>Lorem.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+          </div>
+        </div>
+
+        <!-- Third Part -->
+        <div class="col-md-3 part d-flex">
+          <img
+            src="https://assets.science.nasa.gov/dynamicimage/assets/science/missions/hubble/galaxies/spiral/Hubble_UGC10043_potw2447a.jpg"
+            alt="Image 3" class="img-fluid">
+          <div>
+            <h5>Lorem.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+          </div>
+        </div>
+
+        <!-- Fourth Part -->
+        <div class="col-md-3 part d-flex">
+          <img
+            src="https://www.nasa.gov/wp-content/uploads/2024/11/11-kitiashvili-i-sc24-sunhelicitytour0.jpg?resize=150,150"
+            alt="Image 4" class="img-fluid">
+          <div>
+            <h5>Lorem.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 text-white d-flex align-items-center justify-content-center"
+      style="background-image: url('https://plus.nasa.gov/wp-content/uploads/2024/11/nasa-holiday-fireplace-key-art-r1-horizontal-program-tile-16-9-without-title.jpg?w=1024'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 800px; filter: brightness(70%); padding-left: 20px;">
+      <div class="finger">
+        <h1 class="fw-bold swt wuf">Warm Up Your <br>Holidays</h1>
+        <p class="litr">
+          Look no further than this cozy and relaxing fireplace—complete with four RS-25 rocket engines and 8.8 million
+          pounds of thrust—to fill your hearth with light and power your party to the Moon!
+        </p>
+        <h5>NASA Virtual Fireplace about Warm Up Your Holidays</h5>
+      </div>
+    </div>
+
+
+
+
+    <!-- Background Section -->
+
+
+    <div class="container my-5">
+      <!-- Section Title -->
+      <h2 class="section-title">Humans in Space</h2>
+
+      <!-- Discover More Link -->
+      <div class="discover-more">
+        <a href="#" class="text-decoration-none text-danger fw-bold">Discover More &rarr;</a>
+      </div>
+
+      <!-- Card Grid -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card"
+            style="background-image: url('https://images-assets.nasa.gov/image/iss063e053998/iss063e053998~large.jpg?w=1200&h=800&fit=crop&crop=faces%2Cfocalpoint');">
+            <div class="card-body">
+              <h5 class="card-title">Why Go to Space</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card"
+            style="background-image: url('https://www.nasa.gov/wp-content/uploads/2023/02/edu_srch_microsofts_hacking_stem.jpg');">
+            <div class="card-body">
+              <h5 class="card-title">Astronauts</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card"
+            style="background-image: url('https://images-assets.nasa.gov/image/iss041e012095/iss041e012095~large.jpg?w=1200&h=798&fit=crop&crop=faces%2Cfocalpoint');">
+            <div class="card-body">
+              <h5 class="card-title">Commercial Space</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card"
+            style="background-image: url('https://www.nasa.gov/wp-content/uploads/2023/01/meir-2.png');">
+            <div class="card-body">
+              <h5 class="card-title">Living in Space</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100 text-white d-flex align-items-center"
+      style="background-image: url('https://www.nasa.gov/wp-content/uploads/2024/11/ksc-20171214-ph-sww01-0009orig.jpeg?resize=1200,800'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 800px; filter: brightness(49%);">
+      <div class="ms-5">
+        <h1 class="fw-bold swt bwt">Earth Information <br> Center</h1>
+        <p class="litr">
+          For more than 50 years, NASA satellites have provided data on Earth's land, water, air, temperature, and
+          climate. NASA's Earth Information Center allows visitors to see how our planet is changing <br>in six key
+          areas: sea level rise and coastal impacts, health and air quality, wildfires, greenhouse gases, sustainable
+          energy, and agriculture.
+        </p>
+        <h5>Start Exploring</h5>
+      </div>
+    </div>
+
+
+
+    <!-- Image of the Day Section -->
+    <div class="container my-4">
+      <section class="image-of-the-day">
+        <div class="row align-items-center">
+          <!-- Text Section -->
+          <div class="col-md-6">
+            <h2 class="bwt">Image Of The Day</h2>
+            <h3>Astronaut Suni Williams and Astrobee</h3>
+            <p>
+              NASA astronaut and Expedition 72 Commander Suni Williams checks out the Astrobee robotic free-flyer
+              in the Kibo laboratory module outfitted with tentacle-like arms containing gecko-like adhesive pads
+              to demonstrate satellite capture techniques. Development of this robotic technology may increase the
+              life span of satellites and enable the removal of space debris.
+            </p>
+            <!-- <a href="#" class="btn btn-primary">Browse Image Archive</a> -->
+          </div>
+          <!-- Image Section -->
+          <div class="col-md-6 text-center">
+            <img src="https://www.nasa.gov/wp-content/uploads/2024/12/iss072e189028orig.jpg" 
+                 alt="Astronaut Suni Williams and Astrobee" 
+                 class="img-fluid">
+          </div>
+        </div>
+      </section>
+    </div>
+    
+
+      <!-- More NASA Images Section -->
+       <div class="container ">
+      <section class="more-nasa-images">
+        <h2 class="bt">More NASA Images</h2>
+        <div class="row gallery">
+          <div class="col-md-5 mb-4">
+            <img src="https://i.pinimg.com/736x/48/81/cd/4881cdee854aa8adef3b8f8427239864.jpg"
+              alt="Holidays on the Space Station">
+            <p class="gallery-title">Holidays on the Space Station Gallery</p>
+          </div>
+          <div class="col-md-5 mb-4">
+            <img src="https://i.pinimg.com/736x/df/f2/4c/dff24ce5ab1dead93cacdd2120b904cf.jpg" alt="Astronaut Selfies">
+            <p class="gallery-title">Astronaut Selfies Gallery</p>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="w-100 text-white d-flex align-items-center justify-content-center"
+    style="background-image: url('https://www.nasa.gov/wp-content/uploads/2023/01/webb-tarantula-neb.png?resize=1200,937'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 800px; filter: brightness(70%); padding-left: 20px;">
+    <div class="finger">
+      <h1 class="fw-bold swt wuf">Explore <br> Universe</h1>
+      <p class="litr">
+        Look no further than this cozy and relaxing fireplace—complete with four RS-25 rocket engines and 8.8 million
+        pounds of thrust—to fill your hearth with light and power your party to the Moon!
+      </p>
+      <h5>NASA Virtual Fireplace about Warm Up Your Holidays</h5>
+    </div>
+  </div>
+
+    <div class="container my-5">
+      <!-- Section Title -->
+      <h1 class="section-title">More Topics from NASA</h1>
+
+      <!-- Discover More Link -->
+      <div class="discover-more">
+        <a href="#" class="text-decoration-none text-danger fw-bold">Discover More &rarr;</a>
+      </div>
+
+      <!-- Card Grid -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card"
+            style="background-image: url('https://www.nasa.gov/wp-content/uploads/2022/08/jsc2022e046413_orig.jpg?resize=1024,576');">
+            <div class="card-body">
+              <h5 class="card-title">Why Go to Space</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card"
+            style="background-image: url('https://www.nasa.gov/wp-content/uploads/2021/03/topic-humans-in-space.jpg');">
+            <div class="card-body">
+              <h5 class="card-title">Astronauts</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card"
+            style="background-image: url('https://science.nasa.gov/wp-content/uploads/2023/06/icescapepondsample-lrg-jpg.webp');">
+            <div class="card-body">
+              <h5 class="card-title">Commercial Space</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card"
+            style="background-image: url('https://science.nasa.gov/wp-content/uploads/2023/06/solar-system-illustration-16x9-1.jpg');">
+            <div class="card-body">
+              <h5 class="card-title">Living in Space</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container my-5">
+
+      <!-- Discover More Link -->
+      <div class="discover-more">
+        <a href="#" class="text-decoration-none text-danger fw-bold">Discover More &rarr;</a>
+      </div>
+
+      <!-- Card Grid -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card"
+            style="background-image: url('https://science.nasa.gov/wp-content/uploads/2023/09/ngc5068-1-flat-final.jpg');">
+            <div class="card-body">
+              <h5 class="card-title">Why Go to Space</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card"
+            style="background-image: url('https://science.nasa.gov/wp-content/uploads/2023/07/stsci-01h44ay5ztcv1npb227b2p650j-temp.png');">
+            <div class="card-body">
+              <h5 class="card-title">Astronauts</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card"
+            style="background-image: url('https://www.nasa.gov/wp-content/uploads/2022/12/aero-topic-card.jpg');">
+            <div class="card-body">
+              <h5 class="card-title">Commercial Space</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col">
+          <div class="card"
+            style="background-image: url('https://www.nasa.gov/wp-content/uploads/2022/12/nasa_technology1.png');">
+            <div class="card-body">
+              <h5 class="card-title">Living in Space</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo.svg" alt="NASA Logo"
+              class="img-fluid mb-3" style="max-width: 150px; color: #ddd;">
+            <h5 style="color: #ffffff;">National Aeronautics and Space Administration</h5>
+            <p style="color: #ffffff;">NASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world
+              through discovery.</p>
+            <a href="#">About NASA's Mission</a><br>
+            <a href="#">Join Us <span>&rarr;</span></a>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-4">
+                <h5>Home</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">News & Events</a></li>
+                  <li><a href="#">Multimedia</a></li>
+                  <li><a href="#">NASA+ <span class="badge bg-danger">LIVE</span></a></li>
+                  <li><a href="#">Missions</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5>Topics</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Humans in Space</a></li>
+                  <li><a href="#">Earth & Climate</a></li>
+                  <li><a href="#">The Solar System</a></li>
+                  <li><a href="#">The Universe</a></li>
+                  <li><a href="#">Science</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h5>More</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Aeronautics</a></li>
+                  <li><a href="#">Technology</a></li>
+                  <li><a href="#">Learning Resources</a></li>
+                  <li><a href="#">About NASA</a></li>
+                  <li><a href="#">NASA en Español</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col-md-8">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="#">Sitemap</a></li>
+              <li class="list-inline-item"><a href="#">For Media</a></li>
+              <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+              <li class="list-inline-item"><a href="#">FOIA</a></li>
+              <li class="list-inline-item"><a href="#">No FEAR Act</a></li>
+              <li class="list-inline-item"><a href="#">Budget & Annual Reports</a></li>
+              <li class="list-inline-item"><a href="#">Accessibility</a></li>
+            </ul>
+            <p class="mt-2">Page Last Updated: Dec 03, 2024 | Page Editor: Dacia Massengill | Responsible NASA Official:
+              Abigail Bowman</p>
+          </div>
+          <div class="col-md-4 text-end">
+            <h5>Follow NASA</h5>
+            <div class="social-icons">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <a href="#">Sitemap</a>
+          <a href="#">For Media</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">FOIA</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">No FEAR Act</a>
+          <a href="#">Office of the IG</a>
+          <a href="#">Budget & Annual Reports</a>
+          <a href="#">Agency Financial Reports</a>
+        </div>
+        <div class="footer-column">
+          <a href="#">Contact NASA</a>
+          <a href="#">Accessibility</a>
+        </div>
+        <div class="footer-info">
+          <span>Page Last Updated: <strong>Dec 04, 2024</strong></span>
+          <span>Page Editor: <strong>Dacia Massengill</strong></span>
+          <span>Responsible NASA Official: <strong>Abigail Bowman</strong></span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .btn-classic {
+            font-family: "Roboto", Sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            font-style: normal;
+            line-height: 24px;
+        }
+
+        .btn-black {
+            border-top: 0px solid #000;
+            border-right: 0px solid red;
+            border-left: 0px solid red;
+        }
+
+        .light {
+            border: none;
+        }
+
+        .light {
+            position: relative;
+        }
+
+        .light::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 0;
+            background-color: black;
+            transition: width 0.5s ease-out;
+        }
+
+        .light:hover::after {
+            width: 100%;
+        }
+
+        .mytxt {
+      background-color: #000;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .image {
+      height: 260px;
+      width: 100%; /* Ensures the image fits within its container */
+      object-fit: cover; /* Maintains aspect ratio without stretching */
+    }
+
+    .mybtn{
+        height: 100px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        
+    }
+
+    .bigbtn{
+        height: 100px;
+
+    }
+
+    .bigbtn:hover{
+        height: 100px;
+        background-color: red;
+        transition: 0.5s;
+        border: none;
+        box-shadow: 1px 1px 10px 1px red;
+
+    } 
+    @media (max-width: 768px) {
+      .d-flex {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center; /* Center-align text for better appearance */
+      }
+
+      .image {
+        height: auto; /* Adjust height for responsiveness */
+        max-width: 100%; /* Make sure image doesn't overflow */
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://toyota-indus.com/wp-content/uploads/2022/08/ToyotaProductLogo_Primary_Black_RGB-1.png"
+                    alt="Toyota Logo" width="40"> TOYOTA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Showroom</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">After Sales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Carousel -->
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://toyota-indus.com/wp-content/uploads/2024/11/Web-Banner-1920-x-450-1.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://toyota-indus.com/wp-content/uploads/2024/05/Web-Banner-1920-x-450-1.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/12/KV-02-Silver-1920-x-450.jpg"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!-- Explore Section -->
+    <section class="text-center py-5">
+        <div class="container">
+            <h2>Explore your ideal Toyota</h2>
+            <p>A Symbol of Quality, Durability, and Reliability</p>
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <button class="btn-classic w-100 btn-black">Cars & MPVs</button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn-classic w-100 light">SUVs & Pickups</button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn-classic w-100 light">Buses & Vans</button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn-classic w-100 light">Gazoo Racing</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container ">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="d-flex align-items-center me-3">
+              <img src="https://toyota-indus.com/wp-content/uploads/2023/03/corolla-400-x-500.png" alt="Car" class="image ">
+              <div class="mytxt">
+                **2020 <b>GTR Model</b> - <i>Turbo Edition</i> - <del>₹1,40,00,000</del> ₹1,50,00,000</div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="d-flex align-items-center">
+              <img src="https://toyota-indus.com/wp-content/uploads/2023/03/corolla-400-x-500.png" alt="Car" class="image ">
+              <div class="mytxt">
+                2023 <b>Honda Civic</b> - <i>Sport Edition</i> - <del>₹24,04,000 </del>₹25,00,000</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex align-items-center">
+              <img src="https://toyota-indus.com/wp-content/uploads/2023/03/corolla-400-x-500.png" alt="Car" class="image ">
+              <div class="mytxt">
+                **2021 <b>Mercedes-Benz E-Class</b> - <i>Exclusive Edition</i> - <del>₹75,00,000</del> ₹80,00,000</div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btns">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"><button class="mybtn col-md-4 ">GET</button><button class="bigbtn col-lg-8">Find A deale</button></div>
+            <div class="col"><button class="mybtn col-md-4 ">GET</button><button class="bigbtn col-lg-8">Get more car</button></div>
+            <div class="col"><button class="mybtn col-md-4 ">GET</button><button class="bigbtn col-lg-8">get Showroom</button></div>
+            <div class="col"><button class="mybtn col-md-4 ">GET</button><button class="bigbtn col-lg-8">vahical stutas</button></div>
+            <div class="col"></div>
+        
+        </div>
+      </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+/* Tablet (width: 1024px and below) */
+@media (max-width: 1024px) {
+    main {
+        padding: 15px;
+    }
+
+    .registration-form {
+        gap: 15px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .header-text h1 {
+        font-size: 22px;
+    }
+}
+
+/* Small Tablet (width: 768px and below) */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .registration-form {
+        grid-template-columns: 1fr;
+        /* Switch to a single column */
+        gap: 15px;
+        width: 100%;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .header-text h1 {
+        font-size: 20px;
+    }
+
+    .header-text p {
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
+
+/* Mobile (width: 768px and below) */
+@media (max-width: 768px) {
+    .registration-form {
+        display: block;
+        gap: 10px;
+    }
+
+    input,
+    select,
+    button {
+        width: 58%;
+        padding: 10px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    label {
+        font-size: 14px;
+        /* Adjust font size */
+        margin-bottom: 5px;
+        /* Space between label and input */
+    }
+
+    button.submit-btn {
+        width: 100%;
+        /* Full width for the submit button */
+    }
+}
+
+/* Mobile (width: 425px and below) */
+@media (max-width: 425px) {
+    .registration-form {
+        display: block;
+        /* Ensure it's a single column layout */
+    }
+
+    input,
+    select,
+    button {
+        font-size: 12px;
+        /* Slightly smaller font for smaller screens */
+        padding: 8px;
+        /* Adjust padding */
+        margin-bottom: 8px;
+        /* Adjust space between form elements */
+        width: 100%;
+        /* Full width for each input */
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    button.submit-btn {
+        width: 100%;
+        /* Button takes up full width */
+    }
+}
+
+/* Extra Small Devices (width: 320px and below) */
+@media (max-width: 320px) {
+
+    input,
+    select,
+    button {
+        font-size: 10px;
+        /* Very small font size for compact devices */
+        padding: 6px;
+        /* Small padding for space optimization */
+    }
+
+    label {
+        font-size: 10px;
+    }
+}

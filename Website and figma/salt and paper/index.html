@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="p:domain_verify" content="055cea8b6e0c0b923df565f4c50c6ce2"/>
+    <title>Salt'n Pepper Restaurant</title>
+    <style>
+        /* General reset and styling */
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Unlock&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Header styling */
+        .header {
+            background-color: #000;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header img {
+            height: 83px;
+            padding-left: 40px;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-nav a {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .header-buttons a {
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-left: 10px;
+            border-radius: 20px;
+            border: 1px solid white;
+
+        }
+
+        .get-franchise {
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 20px;
+
+
+        }
+
+        .order-online {
+            background-color: #ff0000;
+            font-size: 20px;
+        }
+
+        /* Main content styling */
+        .main-content {
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .main-content img {
+            width: 100%;
+            margin: 0;
+            /* Remove margin from image */
+            border-radius: 0;
+            /* Remove border-radius for full-width image */
+        }
+
+        /* Footer styling */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: #fff;
+            font-size: 18px;
+            margin-top: 0;
+            height: 200px;
+            justify-content: center;
+        }
+
+        .footer h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        b {
+            font-size: 40px;
+            font-family: "Unlock", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        .likep {
+            font-size: 30px;
+
+        }
+
+        .youtube {
+            color: #837e7e;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Unique Header styling */
+        .sp-header {
+            background-color: #000;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sp-header img {
+            height: 40px;
+        }
+
+        .sp-header-buttons a {
+            padding: 8px 16px;
+            background-color: #ff0000;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #fff;
+            margin-left: 10px;
+        }
+
+        /* Unique Main Content styling */
+        .sp-main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #000;
+        }
+
+        .sp-restaurant-card {
+            text-align: center;
+            width: 250px;
+        }
+
+        .sp-restaurant-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .sp-restaurant-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            border: 1px solid #fff;
+            border-radius: 20px;
+            color: #fff;
+        }
+
+        /* Unique Footer styling */
+        .sp-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #111;
+            flex-direction: row-reverse;
+            /* Move image to the right */
+        }
+
+        .sp-footer img {
+            height: 250px;
+            border-radius: 5px;
+        }
+
+        .sp-footer-info {
+            text-align: left;
+        }
+
+        .sp-footer-info h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .sp-footer-info p {
+            margin-bottom: 10px;
+        }
+
+        .sp-footer a {
+            padding: 8px 16px;
+            background-color: #ff0000;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+
+        .hello {
+            background-color: #fff;
+        }
+
+        /* Unique Footer styling */
+        .sp-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #111;
+        }
+
+        .sp-footer img {
+            height: 300px;
+            width: 500px;
+            border-radius: 5px;
+        }
+
+        .sp-footer-info {
+            text-align: left;
+        }
+
+        .sp-footer-info h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .sp-footer-info p {
+            margin-bottom: 10px;
+        }
+
+        .sp-footer a {
+            padding: 8px 16px;
+            background-color: #ff0000;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .sp-footer-reverse {
+            flex-direction: row;
+        }
+
+        q:hover {
+            text-shadow: 3px 3px 4px white;
+            color: rgb(255, 67, 199);
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            color: rgb(255, 255, 255);
+            font-size: 28px;
+            text-align: center;
+            margin: 20px 0;
+            font-family: "Unlock", serif;
+
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .location-card {
+            background-color: rgb(0, 0, 0);
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 10px;
+            padding: 20px;
+            width: 900px;
+        }
+
+
+        .location-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .location-card h2 {
+            margin: 10px 0;
+            font-size: x-large;
+            font-family: "Unlock", serif;
+
+        }
+
+        .address,
+        .phone {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+
+
+        .q {
+            background-color: #f9f9f9;
+            color: #000;
+            width: 350px;
+            height: 200px;
+        }
+
+        .bread img {
+            width: 374px;
+
+            padding: 10px;
+        }
+
+        img {
+            width: 220px;
+        }
+
+        .ment {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .lojo {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .links li {
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact h2 {
+            margin-bottom: 10px;
+        }
+
+        .contact p {
+            margin-bottom: 5px;
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+        }
+
+        .social a {
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        .social img {
+            height: 30px;
+        }
+
+        .app-store {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .app-store a {
+            margin-right: 10px;
+        }
+
+        .app-store img {
+            height: 40px;
+        }
+
+
+
+        .bless {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1300px;
+        }
+
+        .bring {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .bring img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        .bring h3 {
+            font-size: 14px;
+            color: red;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .bring h1 {
+            font-size: 18px;
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .bring p {
+            font-size: 14px;
+            margin: 0;
+            color: #666;
+        }
+
+        .FLW img {
+    width: 299px;
+}
+
+
+.gender {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: #111;
+        }
+
+        .gender img {
+            width: 600px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .balon {
+            margin-left: 20px;
+            max-width: 500px;
+        }
+
+        .balon h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .balon h2 {
+            font-size: 20px;
+            font-weight: normal;
+            color: red;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+
+        .balon h3 {
+            font-size: 28px;
+            font-weight: normal;
+            margin: 10px 0;
+        }
+
+        .balon p {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #aaa;
+        }
+
+        .balon .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+
+        .balon .button:hover {
+            background-color: #218838;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <img src="https://images-beta.tossdown.com/site/65b73fb7-2706-4440-87b9-9555fcd0ba80.webp"
+            alt="Salt'n Pepper Logo">
+        <nav class="header-nav">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Publications</a>
+        </nav>
+        <div class="header-buttons">
+            <a href="#" class="get-franchise">Get a Franchise</a>
+            <a href="#" class="order-online">Order Online ▶</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <img src="https://static.tossdown.com/images/ac51af11-090c-49e8-9296-472de72fc5cb.webp"
+            alt="Free Delivery Image">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2>Welcome to <b> Salt'n Pepper</b> </h2>
+        <p class="likep"><B style="text-shadow: 3PX 2PX 3PX rgb(255, 0, 191);"><q> MADE BY AMNA</q></B></p>
+        <p class="youtube"> Please click our brands below for further information, reservations or to order online!</p>
+    </footer>
+
+
+    <!-- Main Content -->
+    <div class="sp-main-content">
+        <div class="sp-restaurant-card">
+            <img src="https://i.pinimg.com/736x/49/af/6e/49af6e7e091f6f50913e89238ff092bd.jpg" class="hello" alt="Salt'n Pepper Restaurant">
+            <a href="#">Order Now</a>
+        </div>
+        <div class="sp-restaurant-card">
+            <img src="https://i.pinimg.com/736x/2e/8a/a4/2e8aa494b0a2ba6a49e892ee8988ca99.jpg" class="hello" alt="Salt'n Pepper Express">
+            <a href="#">Order Now</a>
+        </div>
+        <div class="sp-restaurant-card">
+            <img src="https://i.pinimg.com/736x/66/12/65/661265d13541d40e4d8490737f73973b.jpg" class="hello" alt="Salt'n Pepper Village">
+            <a href="#">Reserve a Table</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- First Footer (no changes) -->
+    <footer class="sp-footer">
+        <img src="https://images-beta.tossdown.com/site/7aba8915-02ed-46ee-bd96-1063abe072fa.webp" alt="Location Image">
+        <div class="sp-footer-info">
+            <h4 style="color: #ff0000;">Islamabad</h4>
+            <p style="font-size: larger;"><b>Salt'n Pepper </b>Restaurant</p>
+            <p> 📍 Plot# 55, Shabbir Plaza, Blue Area, F-6, Islamabad</p>
+            <p> 📞Ph: 051-2604904-6</p>
+            <button
+                style="background-color: #111; color: #f9f9f9; border: 0.6px solid white; width: 110px; height: 40px; border-radius: 60px;">get
+                direction ▶</button>
+        </div>
+    </footer>
+
+    <!-- Second Footer (with reverse layout) -->
+    <footer class="sp-footer sp-footer-reverse">
+        <img src="https://images-beta.tossdown.com/site/b2f78afe-11e4-4af5-8aef-cff9c2908614.webp" alt="Location Image">
+        <div class="sp-footer-info">
+            <h4 style="color: #ff0000;">fasalabad</h4>
+            <p style="font-size: larger;"><b>Salt'n Pepper </b>Restaurant</p>
+            <p> 📍 Plot# 55, Shabbir Plaza, Blue Area, F-6, Islamabad</p>
+            <p> 📞Ph: 051-2604904-6</p>
+            <button
+                style="background-color: #111; color: #f9f9f9; border: 0.6px solid white; width: 110px; height: 40px; border-radius: 60px;">get
+                direction ▶</button>
+        </div>
+    </footer>
+    <footer class="sp-footer">
+        <img src="https://images-beta.tossdown.com/site/11771dbf-36a1-4684-a55e-18af61e0f77c.webp" alt="Location Image">
+        <div class="sp-footer-info">
+            <h4 style="color: #ff0000;">Islamabad</h4>
+            <p style="font-size: larger;"><b>Salt'n Pepper </b>Restaurant</p>
+            <p> 📍 Plot# 55, Shabbir Plaza, Blue Area, F-6, Islamabad</p>
+            <p> 📞Ph: 051-2604904-6</p>
+            <button
+                style="background-color: #111; color: #f9f9f9; border: 0.6px solid white; width: 110px; height: 40px; border-radius: 60px;">get
+                direction ▶</button>
+        </div>
+    </footer>
+    <h1 class="logo">Salt 'n Pepper Express Franchises</h1>
+
+    <div class="container">
+
+        <div class="location-card">
+            <img src="https://static.tossdown.com/images/0f3ddba0-18a0-450e-af77-188aeb795934.webp" alt="Emporium Mall"
+                class="location-image">
+            <h2>Salt'n Pepper Express</h2>
+            <p class="address">Address: 123 Mall Road, Emporium Mall</p>
+            <p class="phone">Phone: (123) 456-7890</p>
+            <button
+                style="background-color: #111; color: #f9f9f9; border: 0.6px solid white; width: 110px; height: 40px; border-radius: 60px;">get
+                direction ▶</button>
+        </div>
+
+        <div class="location-card">
+            <img src="https://images-beta.tossdown.com/site/5653706f-83e4-42bb-99f9-4a64e9a1101a.webp" alt="Sargodha"
+                class="location-image">
+            <h2>Salt'n Pepper Express</h2>
+            <p class="address">Address: 456 Main St, Sargodha</p>
+            <p class="phone">Phone: (234) 567-8901</p>
+            <button
+                style="background-color: #111; color: #f9f9f9; border: 0.6px solid white; width: 110px; height: 40px; border-radius: 60px;">get
+                direction ▶</button>
+        </div>
+
+        <div class="location-card">
+            <img src="https://static.tossdown.com/images/171bb884-f60a-4d94-a0b9-78204522564e.webp" alt="Jhelum"
+                class="location-image">
+            <h2>Salt'n Pepper Express</h2>
+            <p class="address">Address: 789 River Rd, Jhelum</p>
+            <p class="phone">Phone: (345) 678-9012</p>
+            <button
+                style="background-color: #111; color: #f9f9f9; border: 0.6px solid white; width: 110px; height: 40px; border-radius: 60px;">get
+                direction ▶</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="location-card">
+            <img src="https://static.tossdown.com/images/31b37f0c-5936-4232-a55e-8042c2656526.webp" alt="Emporium Mall"
+                class="location-image">
+            <h2>Salt'n Pepper Express</h2>
+            <p class="address">Address: 123 Mall Road, Emporium Mall</p>
+            <p class="phone">Phone: (123) 456-7890</p>
+            <button
+                style="background-color: #111; color: #f9f9f9; border: 0.6px solid white; width: 110px; height: 40px; border-radius: 60px;">get
+                direction ▶</button>
+        </div>
+
+        <div class="location-card">
+            <img src="https://static.tossdown.com/images/114fd251-9864-44bc-9f51-0eb05781303c.webp" alt="Sargodha"
+                class="location-image">
+            <h2>Salt'n Pepper Express</h2>
+            <p class="address">Address: 456 Main St, Sargodha</p>
+            <p class="phone">Phone: (234) 567-8901</p>
+            <button
+                style="background-color: #111; color: #f9f9f9; border: 0.6px solid white; width: 110px; height: 40px; border-radius: 60px;">get
+                direction ▶</button>
+        </div>
+
+        <div class="location-card">
+            <img src="https://static.tossdown.com/images/bbac9f4a-2970-4bc4-b8a1-541857d96e79.webp" alt="Jhelum"
+                class="location-image">
+            <h2>Salt'n Pepper Express</h2>
+            <p class="address">Address: 789 River Rd, Jhelum</p>
+            <p class="phone">Phone: (345) 678-9012</p>
+            <button
+                style="background-color: #111; color: #f9f9f9; border: 0.6px solid white; width: 110px; height: 40px; border-radius: 60px;">get
+                direction ▶</button>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="location-card">
+            <img src="https://static.tossdown.com/site/6b8657b7-91ec-4e06-a06c-5cad0d70606d.webp" alt="Emporium Mall"
+                class="location-image">
+            <h2>Salt'n Pepper Express</h2>
+            <p class="address">Address: 123 Mall Road, Emporium Mall</p>
+            <p class="phone">Phone: (123) 456-7890</p>
+            <button
+                style="background-color: #111; color: #f9f9f9; border: 0.6px solid white; width: 110px; height: 40px; border-radius: 60px;">get
+                direction ▶</button>
+        </div>
+
+        <div class="location-card">
+            <img src="https://static.tossdown.com/images/a860f757-114b-4453-ba86-f7b24dc0f24e.webp" alt="Sargodha"
+                class="location-image">
+            <h2>Salt'n Pepper Express</h2>
+            <p class="address">Address: 456 Main St, Sargodha</p>
+            <p class="phone">Phone: (234) 567-8901</p>
+            <button
+                style="background-color: #111; color: #f9f9f9; border: 0.6px solid white; width: 110px; height: 40px; border-radius: 60px;">get
+                direction ▶</button>
+        </div>
+
+        <div class="location-card">
+            <img src="https://static.tossdown.com/images/0cdc03af-9732-4d0c-9174-f4e66953b3c8.webp" alt="Jhelum"
+                class="location-image">
+            <h2>Salt'n Pepper Express</h2>
+            <p class="address">Address: 789 River Rd, Jhelum</p>
+            <p class="phone">Phone: (345) 678-9012</p>
+            <button
+                style="background-color: #111; color: #f9f9f9; border: 0.6px solid white; width: 110px; height: 40px; border-radius: 60px;">get
+                direction ▶</button>
+        </div>
+    </div>
+
+  
+
+    <div class="gender">
+        
+        <img src="https://images-beta.tossdown.com/site/0df39a08-2dca-4998-adda-4ca66b1132cb.webp">
+        <div class="balon">
+<b>Salt'n Pepper </b>
+            <h2>Village Franchise</h2>
+            <h3>GUJRANWALA</h3>
+            <p><strong>Salt'n Pepper Village</strong></p>
+            <div class="location">
+                
+                <p>Adjacent to Rida Marquees / DHA Main Gate, GT Road Gujranwala Cantt</p>
+            </div>
+            <p>Ph: 055-3884500 | 055-3880400</p>
+            <a href="#" class="button">Get Directions</a>
+        </div>
+    </div>
+
+    <div class="bread">
+        <center>
+
+            <div class="bless">
+                <div class="bring">
+                    <img src="https://i.pinimg.com/236x/f2/8d/38/f28d38ee3e542a4d8b340068b7994858.jpg"
+                        alt="Location Icon">
+                    <h3>OPENING SOON</h3>
+                    <h1>Salt'n Pepper Express</h1>
+                    <p>Al-Jalil Garden<br>Sadhoke</p>
+                </div>
+                <div class="bring">
+                    <img src="https://i.pinimg.com/236x/f2/8d/38/f28d38ee3e542a4d8b340068b7994858.jpg"
+                        alt="Location Icon">
+                    <h3>OPENING SOON</h3>
+                    <h1>Salt'n Pepper Express</h1>
+                    <p>Al-Jalil Garden<br>Sheikhupura</p>
+                </div>
+                <div class="bring">
+                    <img src="https://i.pinimg.com/236x/f2/8d/38/f28d38ee3e542a4d8b340068b7994858.jpg"
+                        alt="Location Icon">
+                    <h3>OPENING SOON</h3>
+                    <h1>Salt'n Pepper Express</h1>
+                    <p>Blue World City<br>Rawalpindi</p>
+                </div>
+                <div class="bring">
+                    <img src="https://i.pinimg.com/236x/f2/8d/38/f28d38ee3e542a4d8b340068b7994858.jpg"
+                        alt="Location Icon">
+                    <h3>OPENING SOON</h3>
+                    <h1>Salt'n Pepper Express</h1>
+                    <p>City Housing<br>Gujranwala</p>
+                </div>
+                <div class="bring">
+                    <img src="https://i.pinimg.com/236x/f2/8d/38/f28d38ee3e542a4d8b340068b7994858.jpg"
+                        alt="Location Icon">
+                    <h3>OPENING SOON</h3>
+                    <h1>Salt'n Pepper Express</h1>
+                    <p>City Housing<br>Sialkot</p>
+                </div>
+                <div class="bring">
+                    <img src="https://i.pinimg.com/236x/f2/8d/38/f28d38ee3e542a4d8b340068b7994858.jpg"
+                        alt="Location Icon">
+                    <h3>OPENING SOON</h3>
+                    <h1>Salt'n Pepper Express</h1>
+                    <p>Al-Jalil Garden<br>Sharqpur</p>
+                </div>
+                <div class="bring">
+                    <img src="https://i.pinimg.com/236x/f2/8d/38/f28d38ee3e542a4d8b340068b7994858.jpg"
+                        alt="Location Icon">
+                    <h3>OPENING SOON</h3>
+                    <h1>Salt'n Pepper Express</h1>
+                    <p>Burewala</p>
+                </div>
+            </div>
+    </div>
+    </center>
+
+
+    <DIV class="FLW">
+
+        <img src="https://static.tossdown.com/images/b3323ea4-613c-4abb-a638-15a2040d65f0.webp" alt="">
+
+        <img src="https://static.tossdown.com/images/0e1296ae-9bcd-493a-a13f-81bd0a376fbb.webp" alt="">
+
+        <img src="https://static.tossdown.com/images/90ae7dd1-d505-40d1-a8ea-bce0ae9353f0.webp" alt="">
+
+        <img src="https://static.tossdown.com/images/2741f491-d49f-4ec1-9de3-4df086748b54.webp" alt="">
+
+        <img src="https://static.tossdown.com/images/b75b70d0-122d-4754-99a5-2ff3e0905144.webp" alt="">
+    </DIV>
+
+    <div class="fot" style="border: 2px solid white; padding: 40px;">
+        <img src="https://static.tossdown.com/images/da52b9b3-ba03-4d41-bc8f-ac9e7d6a598b.webp" alt="">
+        <p style="font-size: small;">
+            The Salt’n Pepper Restaurants are an example of gracious dinning, <br> outstanding service, extraordinary
+            classic and contemporary cuisine. The <br> restaurants have become the ultimate dinning destinations in
+            Lahore. From family <br> occasions to business dinner and moments of the heart, this place is where <br>
+            unforgettable memories are made.
+            Terms & conditions Privacy policy</p>
+
+        <div class="ment">
+            <div class="lojo">
+                <h3 style="color: black;">Salf'n Pepper</h3>
+                <p style="color: black;">Restaurant-</p>
+            </div>
+
+            <div class="links">
+                <h4>Site Links</h4>
+                <ul>
+                    <li>Home</li>
+                    <li>Menu</li>
+                    <li>About Us</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@saltandpepper.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+
+        <div class="social">
+            <a href="#"><img src="" alt="Facebook"></a>
+            <a href="#"><img src="" alt="Twitter"></a>
+            <a href="#"><img src="" alt="Instagram"></a>
+        </div>
+
+        <div class="app-store">
+            <a href="#"><img src="app-store.png" alt="App Store"></a>
+            <a href="#"><img src="google-play.png" alt="Google Play"></a>
+        </div>
+    </div>
+</body>
+
+</html>
+
+</body>
+
+</html>

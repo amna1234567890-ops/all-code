@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .piano-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    
+
+        .piano {
+            display: flex;
+            position: relative;
+            width: 800px; /* Width of piano */
+            height: 200px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            overflow: hidden; /* Hide overflow */
+        }
+
+        .key {
+            width: 50px; /* Width of white keys */
+            height: 100%; /* Full height */
+            border: 1px solid #aaa;
+            background-color: white;
+            position: relative;
+            transition: background-color 0.1s, transform 0.1s;
+            z-index: 0;
+            display: flex;
+            align-items: flex-end; /* Align text to bottom */
+            justify-content: center; /* Center text */
+            font-size: 16px;
+            color: #333;
+        }
+
+        .key.black {
+            width: 30px; /* Width of black keys */
+            height: 93px; /* Shorter than white keys */
+            background-color: black;
+            position: absolute;
+            left: 35px; /* Center black key on white key */
+            margin-left: -15px; /* Center black key on white key */
+            z-index: 1; /* Overlap white key */
+        }
+
+        .key:hover {
+            background-color: #e0e0e0; /* Light grey on hover for white keys */
+            transform: translateY(-5px);
+        }
+
+        .key.black:hover {
+            background-color: #444; /* Darker grey on hover for black keys */
+            transform: translateY(-5px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 800px) {
+            .piano {
+                width: 100%; /* Full width on smaller screens */
+            }
+
+            .key {
+                font-size: 12px; /* Smaller text on mobile */
+            }
+        }
+
+        /* Key labels */
+        .key p {
+            margin: 0;
+            padding: 5px;
+            position: absolute;
+            bottom: 0;
+            color: #444;
+            text-transform: uppercase;
+        }
+
+        /* Additional styles for better appearance */
+        .piano:hover .key {
+            border-color: #888; /* Change border color on piano hover */
+        }
+
+     
+
+  
+    </style>
+</head>
+
+<body>
+  
+        <div class="piano" id="piano">
+            <!-- White keys -->
+            <div class="key" data-sound="sounds/note1.mp3" data-key="a"><p>a</p></div>
+            <div class="key" data-sound="sounds/note2.mp3" data-key="s"><p>s</p></div>
+            <div class="key" data-sound="sounds/note3.mp3" data-key="d"><p>d</p></div>
+            <div class="key" data-sound="sounds/note4.mp3" data-key="f"><p>f</p></div>
+            <div class="key" data-sound="sounds/note5.mp3" data-key="g"><p>g</p></div>
+            <div class="key" data-sound="sounds/note6.mp3" data-key="h"><p>h</p></div>
+            <div class="key" data-sound="sounds/note7.mp3" data-key="j"><p>j</p></div>
+            <div class="key" data-sound="sounds/note8.mp3" data-key="k"><p>k</p></div>
+            <div class="key" data-sound="sounds/note9.mp3" data-key="l"><p>l</p></div>
+            <div class="key" data-sound="sounds/note10.mp3" data-key="z"><p>z</p></div>
+            <div class="key" data-sound="sounds/note11.mp3" data-key="x"><p>x</p></div>
+            <div class="key" data-sound="sounds/note12.mp3" data-key="c"><p>c</p></div>
+            <div class="key" data-sound="sounds/note13.mp3" data-key="v"><p>v</p></div>
+            <div class="key" data-sound="sounds/note14.mp3" data-key="b"><p>b</p></div>
+            <div class="key" data-sound="sounds/note15.mp3" data-key="n"><p>n</p></div>
+            <div class="key" data-sound="sounds/note16.mp3" data-key="m"><p>m</p></div>
+            <div class="key" data-sound="sounds/note17.mp3" data-key="q"><p>q</p></div>
+            <div class="key" data-sound="sounds/note18.mp3" data-key="w"><p>w</p></div>
+            <div class="key" data-sound="sounds/note19.mp3" data-key="e"><p>e</p></div>
+            <div class="key" data-sound="sounds/note20.mp3" data-key="r"><p>r</p></div>
+
+            <!-- Black keys positioned correctly -->
+            <div class="key black" style="left: 35px;" data-sound="sounds/black1.mp3" data-key="1"><p style="color: white;">1</p></div>
+            <div class="key black" style="left: 85px;" data-sound="sounds/black2.mp3" data-key="2"><p style="color: white;">2</p></div>
+            <div class="key black" style="left: 135px;" data-sound="sounds/black3.mp3" data-key="3"><p style="color: white;">3</p></div>
+            <div class="key black" style="left: 185px;" data-sound="sounds/black4.mp3" data-key="4"><p style="color: white;">4</p></div>
+            <div class="key black" style="left: 285px;" data-sound="sounds/black5.mp3" data-key="5"><p style="color: white;">5</p></div>
+            <div class="key black" style="left: 335px;" data-sound="sounds/black6.mp3" data-key="6"><p style="color: white;">6</p></div>
+            <div class="key black" style="left: 435px;" data-sound="sounds/black7.mp3" data-key="7"><p style="color: white;">7</p></div>
+            <div class="key black" style="left: 485px;" data-sound="sounds/black8.mp3" data-key="8"><p style="color: white;">8</p></div>
+            <div class="key black" style="left: 585px;" data-sound="sounds/black9.mp3" data-key="9"><p style="color: white;">9</p></div>
+            <div class="key black" style="left: 635px;" data-sound="sounds/black10.mp3" data-key="0"><p  style="color: white;">0</p></div>
+        </div>
+ 
+
+    <script>
+        const keys = document.querySelectorAll('.key');
+
+        const playSound = (key) => {
+            const audio = new Audio(key.dataset.sound);
+            audio.currentTime = 0; // Rewind to the start
+            audio.play();
+            key.style.transform = 'translateY(-5px)'; // Play animation
+            setTimeout(() => {
+                key.style.transform = 'translateY(0)';
+            }, 100);
+        };
+
+        keys.forEach(key => {
+            key.addEventListener('click', () => {
+                playSound(key);
+            });
+        });
+
+        // Keyboard support
+        document.addEventListener('keydown', (event) => {
+            const key = [...keys].find(k => k.dataset.key === event.key);
+            if (key) {
+                playSound(key);
+            }
+        });
+    </script>
+</body>
+
+</html>

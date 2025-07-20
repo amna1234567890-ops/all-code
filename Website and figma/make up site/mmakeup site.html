@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cosomatic Products</title>
+    <style>
+        /* Reset some basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(to right, #ffecc4, #dbb1ff, #ffffff, #a9fff1);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            height: 250px;
+         
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #ff66b2;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #a759a7;
+            margin-bottom: 20px;
+        }
+
+        /* Navigation Styling */
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ff66b2;
+            font-size: 1.1rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+          
+        }
+
+        nav a:hover {
+            color: #ff99cc;
+        }
+
+        /* Product Gallery Styling */
+        .product-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px;
+        }
+
+        /* Product Card Styling */
+        .productfirst {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 450px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .productfirst:hover {
+            transform: translateY(-10px); /* Lift effect */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+        }
+
+        /* Product Image Container */
+        .product-image {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Base Product Image */
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Front Image */
+        .front-image {
+            opacity: 1;
+        }
+
+        /* Back Image (hidden by default) */
+        .back-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Hover Effect on Product Card */
+        .productfirst:hover .front-image {
+            opacity: 0; 
+        }
+
+        .productfirst:hover .back-image {
+            opacity: 1;
+        }
+
+        /* Product Title */
+        .productfirst h2 {
+            margin: 20px 0;
+            font-size: 1.4rem;
+            color: #ff66b2;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #ff66b2;
+            color: white;
+            padding: 20px 0;
+            font-size: 1rem;
+            margin-top: 40px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section with Navigation -->
+    <header>
+        <h1>Cosomatic Products</h1>
+        <p>Explore our soothing and elegant collection</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section with Products -->
+    <section id="home" class="product-gallery">
+        <!-- Product 1 -->
+        <div class="productfirst">
+            <div class="product-image">
+                <img src="https://i.pinimg.com/236x/ca/0f/87/ca0f873874542fac8268798e7ca84f25.jpg" alt="Product 1 Front" class="product-img front-image" />
+                <img src="https://i.pinimg.com/236x/f8/cd/77/f8cd775c01edd43e681fcfc340ede585.jpg" alt="Product 1 Back" class="product-img back-image" />
+            </div>
+            <h2>Product 1</h2>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="productfirst">
+            <div class="product-image">
+                <img src="https://i.pinimg.com/236x/52/f9/88/52f9880f5cacce3a8967e84f04be36bc.jpg" alt="Product 2 Front" class="product-img front-image" />
+                <img src="https://i.pinimg.com/236x/fa/8f/85/fa8f85a712f62b8013b92289e6c2bd5d.jpg" alt="Product 2 Back" class="product-img back-image" />
+            </div>
+            <h2>Product 2</h2>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="productfirst">
+            <div class="product-image">
+                <img src="https://i.pinimg.com/236x/34/fc/ca/34fcca3c315b7d1c8bed762bd8db01e4.jpg" alt="Product 3 Front" class="product-img front-image" />
+                <img src="https://i.pinimg.com/236x/e9/35/03/e93503597c39db3dfb78ce1f071ff002.jpg" alt="Product 3 Back" class="product-img back-image" />
+            </div>
+            <h2>Product 3</h2>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Cosomatic. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

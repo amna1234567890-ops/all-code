@@ -1,0 +1,169 @@
+@media (max-width: 992px) {
+
+    header {
+        display: flex;
+    }
+
+    .jj {
+        display: none;
+    }
+
+    .gren,
+    .tyu {
+        display: none;
+
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .menu {
+        flex-wrap: wrap;
+    }
+    .statistics {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mainbar button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .what-we-are-doing {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .what-we-are-doing .dos{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .hmm {
+        flex-direction: column;
+    }
+    .left-section, .right-section {
+        width: 100%;
+    }
+
+    .mainbar {
+        height: 470px;
+    
+    }
+
+    .botenv {
+        margin: 27px 10px 10px 10px;
+    }
+
+    .boten {
+        display: flex;
+        padding: 20px;
+        margin: 10px;
+
+    }
+
+    .gren {
+        display: block;
+        text-align: center;
+     
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .header, .container {
+        flex-direction: column;
+    }
+    .hero {
+        text-align: center;
+    }
+    .hero h2, .hero p {
+        font-size: 1.2rem;
+    }
+    .statistics {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .what-we-are-doing {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .mainbar button {
+        font-size: 1rem;
+    }
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mainbar {
+        height: 470px;
+    
+    }
+
+    .botenv {
+        margin: 27px 10px 10px 10px;
+    }
+
+    .boten {
+        display: flex;
+        padding: 20px;
+        margin: 10px;
+
+    }
+
+    .gren {
+        display: block;
+        text-align: center;
+     
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+    .header {
+        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .menu {
+        font-size: 0.9rem;
+    }
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .image-section img {
+        max-width: 100%;
+    }
+    .statistics .stat-item {
+        text-align: center;
+    }
+    .grid-container .box {
+        width: 100%;
+    }
+    .guide input {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .mainbar {
+        height: 470px;
+    
+    }
+
+    .botenv {
+        margin: 27px 10px 10px 10px;
+    }
+
+    .boten {
+        display: flex;
+        padding: 20px;
+        margin: 10px;
+
+    }
+
+    .gren {
+        display: block;
+        text-align: center;
+     
+    }
+}
+

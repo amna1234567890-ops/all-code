@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord-Like Page</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            background-color: #2c2f33;
+            color: white;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #23272a;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .sidebar h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .channel {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .channel:hover {
+            background-color: #3a3f43;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .message-area {
+            flex: 1;
+            background-color: #40444b;
+            border-radius: 5px;
+            padding: 10px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .input-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-area input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+        }
+
+        .input-area button {
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: #7289da;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .input-area button:hover {
+            background-color: #5b6eae;
+        }
+
+        .message {
+            margin: 5px 0;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #3a3f43;
+        }
+
+        .language-select {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .language-select select {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: #40444b;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Channels</h2>
+        <div class="channel"># general</div>
+        <div class="channel"># random</div>
+        <div class="channel"># announcements</div>
+        <div class="channel"># memes</div>
+    </div>
+
+    <div class="main">
+        <div class="message-area" id="messageArea">
+            <div class="message">User1: Hello everyone!</div>
+            <div class="message">User2: How's it going?</div>
+            <div class="message">User3: Any plans for the weekend?</div>
+            <div class="message">User4: I'm going hiking on Saturday!</div>
+            <div class="message">User2: That sounds awesome!</div>
+            <div class="message">User1: Anyone else want to join?</div>
+            <div class="message">User5: I might be able to join, depends on work.</div>
+            <div class="message">User3: I wish I could, but I'm busy with family.</div>
+            <div class="message">User4: No worries, maybe next time!</div>
+            <div class="message">User2: We could also plan something next weekend.</div>
+            <div class="message">User1: Yeah, that would be great!</div>
+            <div class="message">User5: Keep me updated.</div>
+            <div class="message">User4: Will do!</div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const sendButton = document.getElementById('sendButton');
+        const messageInput = document.getElementById('messageInput');
+        const messageArea = document.getElementById('messageArea');
+        
+        // Random word banks to create unpredictable, dynamic messages
+        const randomGreetings = ["Hey", "Yo", "What's up", "Hi", "Heya"];
+        const randomPhrases = ["just chilling", "working on something", "thinking about stuff", "enjoying the day", "not much going on"];
+        const randomClosings = ["you?", "how about you?", "anything new?", "what's on your mind?", "tell me something!"];
+    
+        sendButton.addEventListener('click', () => {
+            const messageText = messageInput.value.toLowerCase(); // Convert to lowercase for simplicity
+            if (messageText) {
+                appendMessage(`You: ${messageText}`);
+                messageInput.value = '';
+                messageArea.scrollTop = messageArea.scrollHeight;
+    
+                // Simulate a random response
+                setTimeout(() => {
+                    const botResponse = generateRandomMessage();
+                    appendMessage(`Friend: ${botResponse}`);
+                    messageArea.scrollTop = messageArea.scrollHeight;
+                }, 1000); // 1 second delay for response
+            }
+        });
+    
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendButton.click();
+            }
+        });
+    
+        function generateRandomMessage() {
+            // Combine random greetings, phrases, and closings to form a message
+            const greeting = randomGreetings[Math.floor(Math.random() * randomGreetings.length)];
+            const phrase = randomPhrases[Math.floor(Math.random() * randomPhrases.length)];
+            const closing = randomClosings[Math.floor(Math.random() * randomClosings.length)];
+            return `${greeting}, ${phrase}. ${closing}`;
+        }
+    
+        function appendMessage(text) {
+            const newMessage = document.createElement('div');
+            newMessage.className = 'message';
+            newMessage.textContent = text;
+            messageArea.appendChild(newMessage);
+        }
+    </script>
+    
+    
+    
+    
+</body>
+
+</html>

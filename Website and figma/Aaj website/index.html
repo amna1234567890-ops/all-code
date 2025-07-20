@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaj website tamplate made by amna</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            width: 100%;
+            margin: -38px;
+            margin-top: 90px;
+        }
+
+        .head-link {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-left: 70px;
+            padding-right: 70px;
+            margin-left: 70px;
+            margin-right: 70px;
+            text-align: center;
+            
+
+        }
+
+        .head-link a {
+            text-decoration: none;
+            color: #000000;
+            font-size: smaller;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+
+        }
+
+        .body-center {
+            margin-left: 100px;
+
+        }
+
+        .logo img {
+            width: 82px;
+            height: auto;
+        }
+
+        .trending {
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        .trending h2 {
+            font-size: 1rem;
+            color: #79413f;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .trending p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        hr {
+            background-color: rgb(0, 59, 126);
+            height: 1px;
+            border: none;
+        }
+
+        i {
+            color: #b6745b;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        i :hover {
+
+            text-decoration: underline rgb(0, 255, 55);
+        }
+
+        .head-bottem {
+            color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 7px 0;
+            background-color: #fff;
+            border-top: 2px solid #333;
+            border-bottom: 2px solid #333;
+            margin-top: 10px;
+            font-family: "Oswald", serif;
+
+        }
+
+        .head-bottem a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 24px;
+            padding: 0 2px;
+            font-family: "Oswald", serif;
+        }
+
+
+        .head-bottem a:hover {
+            color: rgb(218, 141, 69);
+            transition: 0.3s;
+        }
+
+        .head-bottem span.separator {
+            color: #000000;
+            padding: 0 5px;
+            font-size: x-large;
+        }
+
+        .search-icon {
+            font-size: 1rem;
+            padding-right: 15px;
+            cursor: pointer;
+        }
+
+        img,
+        p {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .body-left {
+            float: right;
+            display: block;
+            border: 2px solid rgb(255, 187, 0);
+            width: 277px;
+            height: 1450px;
+            padding: 10px;
+            line-height: 1.6;
+            margin-top: 20px;
+            font-size: 17px;
+        }
+
+
+        .body-left a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            margin-top: 10px;
+
+        }
+
+        .body-left a:hover {
+            text-decoration: underline rgb(30, 141, 54);
+        }
+
+        h2 {
+            background-color: rgb(206, 255, 209);
+            letter-spacing: 12px;
+            margin-top: -9px;
+        }
+
+        p {
+            padding-bottom: 0;
+            margin-bottom: 17px;
+        }
+
+        .gg {
+            padding: 93px 50px 70px 230px;
+            width: 720px;
+        }
+
+        .t {
+            font-size: 20px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding-top: -99px;
+            padding-left: 166px;
+            display: flex;
+            margin-right: -8;
+            margin-top: -44px;
+            text-decoration: none;
+        }
+
+        body {
+            margin-top: -100px;
+        }
+
+        .t:hover {
+            text-decoration: underline green;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .center-bottem {
+            display: flex;
+            justify-content: center;
+            border: 2px solid black;
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+            margin-left: 188px;
+            border-radius: 5px;
+        }
+
+        .onead {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            width: 100%;
+            padding: 17px;
+
+
+        }
+
+        .img-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .img-of-ads {
+            width: 100%;
+            max-width: 180px;
+        }
+
+        .caption {
+            margin-top: 6px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .caption:hover {
+            cursor: pointer;
+        }
+
+
+        .bottem-left {
+            float: left;
+            width: 300px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: -1488px;
+
+        }
+
+        .bottem-left-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .bottem-left-item:last-child {
+            border-bottom: none;
+        }
+
+        .bottem-left h3 {
+            font-size: 18px;
+            color: #000000;
+            margin: 0;
+        }
+
+        .bottem-left.category {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .bottem-left-item img {
+            width: 150px;
+            height: auto;
+            margin-top: 5px;
+            float: right;
+
+        }
+
+        .bottem-left-item p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .quote-card {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Image styling */
+        .quote-image {
+            flex-shrink: 0;
+            width: 140px;
+            height: 130px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+
+        .quote-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Quote text styling */
+        .quote-text {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .video {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 equal columns */
+            gap: 20px;
+            /* space between grid items */
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .video-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        b {
+            font-size: large;
+        }
+
+        .video-img {
+            width: 240px;
+        }
+
+        .ttyy {
+            margin-top: 10px;
+        }
+
+        .life {
+            display: grid;
+            grid-template-areas:
+                "top-left top-middle top-right"
+                "middle-left middle  middle-right"
+                "bottom-left bottom-middle bottom-right";
+            gap: 10px;
+        }
+
+        .life img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: flex;
+        }
+
+        /* Positioning the images in the grid */
+
+        .qwer {
+            width: 500px;
+        }
+
+        .wv {
+            width: 250px;
+            height: 200px;
+        }
+
+
+        .CV {
+            font-size: 19px;
+            font-weight: 900;
+            background-color: #000000;
+            color: #f9f9f9;
+            padding: 10px;
+            border-radius: 10px;
+            width: 140px;
+        }
+
+        .boled {
+            font-size: 20px;
+            font-weight: 840;
+            background-color: #000000;
+            color: #f9f9f9;
+            padding: 4px;
+            border-radius: 10px;
+            width: 180px;
+            margin-right: 377px;
+        }
+
+        .bottem-left-item2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* Creates 3 equal columns in a row */
+            gap: 10px;
+            /* Adds space between items */
+        }
+
+        .News-Image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        table {
+            justify-content: center;
+            align-items: center;
+        }
+
+        th {
+            font-size: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial Narrow, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+
+        }
+
+        td {
+            width: 900px;
+            justify-content: center;
+            align-items: center;
+
+
+
+        }
+
+        .bye-tags {
+            width: 40px;
+            margin-top: 40px;
+        }
+
+        .finally {
+            margin: 70px;
+        }
+
+        .amna {
+            font-size: small;
+            font-style: italic;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        q {
+            color:var(--teal-200,#02bb9b);
+            font-weight: 600;
+            font-family: "Oswald", serif;
+            font-size: small;
+        }
+
+        @media (max-width: 480px) {
+
+            .header,
+            .head-bottem,
+            .body-left,
+            .bottem-left {
+                padding: 10px;
+            }
+
+            .head-link a,
+            .head-bottem a {
+                font-size: 0.9rem;
+            }
+
+            .img-of-ads {
+                max-width: 80px;
+            }
+
+            .caption {
+                font-size: 12px;
+            }
+
+            h2 {
+                font-size: 1rem;
+                letter-spacing: normal;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+
+        <div class="head-link">
+            <a href="#"><i> Watch </i></a>
+            <hr>
+            <a href="#">Community</a>
+            <hr>
+            <a href="#">Climate</a>
+        </div>
+
+        <div class="logo" style="text-align: center;">
+            <img src="https://english.aaj.tv/_img/logo.png" alt="Logo">
+            <p class="amna">(This website made by AMNA) Roll-number : 330083 </p>
+        </div>
+
+        <div class="head-link">
+            <a href="#"><i> <b> اردو</b></i></a>
+            <hr>
+            <a href="#">Top Trending</a>
+            <hr>
+            <a href="#">cricket</a>
+        </div>
+    </div>
+
+    <div class="head-bottem">
+        <b>
+            <a href="#">Video</a>
+            <span class="separator">|</span>
+            <a href="#">Lifestyle</a>
+            <span class="separator">|</span>
+            <a href="#">Business</a>
+            <span class="separator">|</span>
+            <a href="#">World</a>
+            <span class="separator">|</span>
+            <a href="#">Nation</a>
+            <span class="separator">|</span>
+            <a href="#">Latest news</a>
+        </b>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="body-left">
+        <h2>popular</h2>
+
+        <a href="#">TikToker minahil Malik says obscene viral video is 'fake' Corinna Kopf announces
+            retirement
+            from</a>
+        <hr>
+        <a href="#">Justice Babar Sattar planning another long leave soon Income tax calculator for FY
+            2024-25</a>
+        <hr>
+        <a href="#">3, Scientists shocked after Burmese python eats deer in Florida Imran Khan's sisters Aleema,
+            Uzma
+            released from Jhelum Jail after court approves bail</a>
+        <hr>
+        <a href="#">4, Escaped prisoners, including PTI leaders, recaptured after attack on police prison van:
+            Islamabad
+            IGP</a>
+        <hr>
+        <a href="#">5, Neither courage, nor moral fortitude': Justice Mansoor writes scathing letter against
+            Justice
+            Isa</a>
+        <hr>
+        <a href="#">6, Gentlemen cadet martyred in terrorist attack on Lakki Marwat mosque: ISPR</a>
+        <hr>
+
+        <a href="#">5, Neither courage, nor moral fortitude': Justice Mansoor writes scathing letter against
+            Justice
+            Isa</a>
+        <hr>
+        <a href="#">6, Gentlemen cadet martyred in terrorist attack on Lakki Marwat mosque: ISPR</a>
+        <hr>
+        <a href="#">5, Neither courage, nor moral fortitude': Justice Mansoor writes scathing letter against
+            Justice
+            Isa</a>
+        <hr>
+        <a href="#">6, Gentlemen cadet martyred in terrorist attack on Lakki Marwat mosque: ISPR</a>
+        <hr>
+        <a href="#">
+            Canada accuses Amit Shah of orchestrating attacks on Sikh separatists
+            Isa</a>
+        <hr>
+
+
+    </div>
+    <div class="body-center">
+        <center class="fff">
+            <a href="#"><img src="https://i.pinimg.com/736x/0c/3a/c1/0c3ac19c482aae72d61f8cf015f8dddf.jpg"
+                    alt="hot tranding artica #pupoler" class="gg"></a>
+            <p class="t"> <a href="#">Saylani Welfare International Trust is <br> a non-government organization focusing
+                    primarily on <br>feeding the poor and homeless.</a> </p>
+
+
+        </center>
+        <center>
+            <div class="boled">Recommended</div>
+
+            <div class="center-bottem">
+                <div class="onead">
+                    <div class="img-container">
+                        <img src="https://i.aaj.tv/medium/2024/11/03002336f26dd6f.webp?r=002440" alt="" class="img-of-ads">
+                        <p class="caption"> Black day of Kashmiris against Indian occupation: Protest demonstrations,
+                            rallies in Islamabad</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="https://i.aaj.tv/primary/2024/10/27164412a6820d6.webp" alt="" class="img-of-ads">
+                        <p class="caption">The Pakistan cricket team for the tour of Australia and Zimbabwe has been
+                            announced</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="https://i.aaj.tv/medium/2024/11/02105123cef2a43.webp?r=105133" alt="" class="img-of-ads">
+                        <p class="caption">Muhammad Rizwan appointed captain of the national team and Salman Ali Agha
+                            appointed vice-captain</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="https://i.aaj.tv/medium/2024/11/021037084628e64.webp?r=103738" alt="" class="img-of-ads">
+                        <p class="caption">Karachi is still hot today, the mercury is likely to go up to 39 degrees</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="https://i.aaj.tv/medium/2024/11/011815062c3ad67.webp?r=185306" alt="" class="img-of-ads">
+                        <p class="caption">Central Contracts Announced! Which player got which category?</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="https://i.aaj.tv/primary/2024/10/2711565282aa498.jpg" alt="" class="img-of-ads">
+                        <p class="caption">Urgent need of Pakistani employees in UK, visas announced</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="https://i.aaj.tv/medium/2024/11/021037580cd2fe9.webp?r=103814" alt="" class="img-of-ads">
+                        <p class="caption">Black day of Kashmiris against Indian occupation: Protest demonstrations,
+                            rallies in Islamabad</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="https://i.aaj.tv/medium/2024/11/011815062c3ad67.webp?r=185306" alt="" class="img-of-ads">
+                        <p class="caption">The Pakistan cricket team for the tour of Australia and Zimbabwe has been
+                            announced</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="https://i.aaj.tv/medium/2024/11/022304373f50e33.webp?r=230644" alt="" class="img-of-ads">
+                        <p class="caption">Muhammad Rizwan appointed captain of the national team and Salman Ali Agha
+                            appointed vice-captain</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="https://i.aaj.tv/primary/2024/10/26192118d9d8c2b.webp" alt="" class="img-of-ads">
+                        <p class="caption">Karachi is still hot today, the mercury is likely to go up to 39 degrees</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+    </div>
+
+    </center>
+    </div>
+
+
+    <div class="bottem-left">
+        <div class="recommended">
+            <p class="CV"> Top Stories</p>
+        </div>
+
+        <div class="bottem-left-item">
+            <div class="category">World | Report</div>
+            <h3>US Congress Letter Regarding Imran Khan Received by President Joe Biden</h3>
+            <img src="https://i.aaj.tv/thumbnail/2024/10/291031584212f4e.jpg?r=103536" alt="hello" class="News-Image">
+            <p>Sikh separatists have been labeled as terrorists by India.</p>
+        </div>
+        <div class="bottem-left-item">
+            <div class="category">World | Report</div>
+            <h3>Imran Khan Granted Major Relief of 14 Days in Parliament Case</h3>
+            <img src="https://i.aaj.tv/thumbnail/2024/10/29214704862f269.webp?r=220222" alt="News-Image"
+                class="News-Image" class="News-Image">
+            <p>The benchmark KSE-100 index climbed 736.10 points.</p>
+        </div>
+        <hr>
+        <div class="bottem-left-item">
+            <div class="category">World | Report</div>
+            <h3>Senior Official and Supporters Strike in Support of Imran Khan</h3>
+            <img src="https://i.aaj.tv/thumbnail/2024/10/29213839a646309.webp?r=213929" alt="News-Image"
+                class="News-Image">
+            <p>PM Shehbaz meets Saudi Crown Prince Muhammad bin Salman in Riyadh on sidelines of FII</p>
+        </div>
+
+        <div class="bottem-left-item">
+            <div class="category">World | Report</div>
+            <h3>4 Killed in Firing Incident at Iranian Border</h3>
+            <img src="https://i.aaj.tv/thumbnail/2024/10/3010571904dbbcb.webp?r=105735" alt="News-Image"
+                class="News-Image">
+            <p>Calls for collective global collaboration in realms of AI</p>
+        </div>
+
+        <div class="bottem-left-item">
+            <div class="category">World | Report</div>
+            <h3>4 Killed in Firing Incident at Iranian Border</h3>
+            <img src="https://i.aaj.tv/thumbnail/2024/11/011522389488284.webp?r=152350" alt="News-Image"
+                class="News-Image">
+            <p>Calls for collective global collaboration in realms of AI</p>
+            <br>
+            <hr>
+            <br>
+
+            <div class="category">World | Report</div>
+            <h3>4 Killed in Firing Incident at Iranian Border</h3>
+            <img src="https://i.aaj.tv/thumbnail/2024/10/301007526b9e93c.webp?r=100809" alt="News-Image"
+                class="News-Image">
+            <p>Calls for collective global collaboration in realms of AI</p>
+        </div>
+        <div class="bottem-left-item">
+            <div class="category">World | Report</div>
+            <h3>4 Killed in Firing Incident at Iranian Border</h3>
+            <img src="https://i.aaj.tv/thumbnail/2024/11/011522389488284.webp?r=152350" alt="News-Image"
+                class="News-Image">
+            <p>Calls for collective global collaboration in realms of AI</p>
+            <br>
+            <hr>
+            <br>
+
+            <div class="category">World | Report</div>
+            <h3>4 Killed in Firing Incident at Iranian Border</h3>
+            <img src="https://i.aaj.tv/thumbnail/2024/10/301007526b9e93c.webp?r=100809" alt="News-Image"
+                class="News-Image">
+            <p>Calls for collective global collaboration in realms of AI</p>
+        </div>
+
+    </div>
+    <center>
+        <div class="quote-card">
+            <div class="quote-image">
+                <img src="https://i.pinimg.com/236x/33/b5/d0/33b5d06329aeae1b9ada55f87a82f768.jpg" alt="Profile Image">
+            </div>
+            <div class="quote-text">
+                “My efforts to mobilize people are not for personal gain, but for the strength of the PTI and Imran
+                Khan.”
+            </div>
+        </div>
+    </center>
+    <div class="video">
+        <div class="video-item">
+            <img src="https://i.ytimg.com/vi/f9GMbFTbjjA/mqdefault.jpg" class="video-img" alt="">
+            <p class="ttyy">Pakistan’s first AI healthcare doctor: an achievement<br> by students from Gilgit-Baltistan
+                - Aaj Pakistan</p>
+        </div>
+        <div class="video-item">
+            <img src="https://i.ytimg.com/vi/GXlKGje340I/mqdefault.jpg" class="video-img" alt="">
+            <p class="ttyy">Valuables stolen from Ben Stokes’ house - Aaj News</p>
+        </div>
+        <div class="video-item">
+            <img src="https://i.ytimg.com/vi/DwhroLt8Yss/mqdefault.jpg" class="video-img" alt="">
+            <p class="ttyy">What is the main cause of traffic accidents in Karachi? - Aaj News</p>
+        </div>
+    </div>
+
+    <hr>
+    <hr>
+    <div class="life">
+        <div class="wv">
+            <img src="https://i.aaj.tv/large/2024/10/31215844deb3549.webp?r=215901" alt="Kabhi Main Kabhi Tum News">
+            <p>Kabhi Main Kabhi Tum: How to watch final episode in cinemas</p>
+        </div>
+        <div class="qwer">
+            <img src="https://i.aaj.tv/large/2024/10/31094609cce41b1.webp?r=094643" alt="Firdous Jamal News">
+        </div>
+        <div class="wv">
+            <img src="https://i.aaj.tv/large/2024/11/01101825fe895f3.webp?r=102126" alt="Darshan Thoogudeepa News">
+            <p>Noor-ul-Hassan shines in Sultan Salahuddin Ayyubi series</p>
+        </div>
+    </div>
+    <hr>
+    <hr>
+    <center>
+        <table>
+            <tr>
+                <th>Sports</th>
+                <th>Business & <br>Economy</th>
+                <th>World</th>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="bottem-left-item2">
+                        <div class="bottem-left-item">
+                            <div class="category"> <q>11 hours ago</q></div>
+                            <h3>US Congress Letter Regarding Imran Khan Received by President Joe Biden</h3>
+                            <img src="https://i.aaj.tv/thumbnail/2024/11/01085918b18d0d8.webp?r=090302" alt="hello"
+                                class="News-Image">
+                            <p>Sikh separatists have been labeled as terrorists by India.</p>
+                        </div>
+                        <div class="bottem-left-item">
+                            <div class="category"> <q>18 hours ago</q></div>           
+
+                            <h3>US Congress Letter Regarding Imran Khan Received by President Joe Biden</h3>
+                            <img src="https://i.aaj.tv/thumbnail/2024/11/0113560743f98ba.webp?r=135640" alt="hello"
+                                class="News-Image">
+                            <p>Sikh separatists have been labeled as terrorists by India.</p>
+                        </div>
+                        <div class="bottem-left-item">
+                            <div class="category"> <q>2 day ago</q></div>           
+                            <h3>US Congress Letter Regarding Imran Khan Received by President Joe Biden</h3>
+                            <img src="https://i.aaj.tv/thumbnail/2024/11/011927086d69201.webp?r=192724" alt="hello"
+                                class="News-Image">
+                            <p>Sikh separatists have been labeled as terrorists by India.</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <td colspan="3">
+                <div class="bottem-left-item2">
+                    <div class="bottem-left-item">
+                        <div class="category"> <q>2 hours ago</q></div>
+                        <h3>US Congress Letter Regarding Imran Khan Received by President Joe Biden</h3>
+                        <img src="https://i.aaj.tv/thumbnail/2024/10/311731475c2d4c3.webp?r=173158" alt="hello"
+                            class="News-Image">
+                        <p>Sikh separatists have been labeled as terrorists by India.</p>
+                    </div>
+                    <div class="bottem-left-item">
+                        <div class="category"> <q>2 hours ago</q></div>
+                        <h3>US Congress Letter Regarding Imran Khan Received by President Joe Biden</h3>
+                        <img src="https://i.aaj.tv/thumbnail/2024/10/31232307044dc95.webp?r=232320" alt="hello"
+                            class="News-Image">
+                        <p>Sikh separatists have been labeled as terrorists by India.</p>
+                    </div>
+                    <div class="bottem-left-item">
+                        <div class="category"> <q>2 days ago</q></div>
+                        <h3>US Congress Letter Regarding Imran Khan Received by President Joe Biden</h3>
+                        <img src="https://i.aaj.tv/thumbnail/2024/10/3115241300e9ca6.webp?r=152418" alt="hello"
+                            class="News-Image">
+                        <p>Sikh separatists have been labeled as terrorists by India.</p>
+                    </div>
+                </div>
+            </td>
+            </tr>
+            <td colspan="3">
+                <div class="bottem-left-item2">
+                    <div class="bottem-left-item">
+                        <div class="category"> <q>4 hours ago</q></div>
+                        <h3>US Congress Letter Regarding Imran Khan Received by President Joe Biden</h3>
+                        <img src="https://i.aaj.tv/thumbnail/2024/11/011957224b501a9.webp?r=195738" alt="hello"
+                            class="News-Image">
+                        <p>Sikh separatists have been labeled as terrorists by India.</p>
+                    </div>
+                    <div class="bottem-left-item">
+                        <div class="category"> <q>2 hours ago</q></div>
+                        <h3>US Congress Letter Regarding Imran Khan Received by President Joe Biden</h3>
+                        <img src="https://i.aaj.tv/thumbnail/2024/10/31082742591aa60.webp?r=082750" alt="hello"
+                            class="News-Image">
+                        <p>Sikh separatists have been labeled as terrorists by India.</p>
+                    </div>
+                    <div class="bottem-left-item">
+                        <div class="category"> <q>1 day 4 hours ago</q></div>
+                        <h3>US Congress Letter Regarding Imran Khan Received by President Joe Biden</h3>
+                        <img src="https://i.aaj.tv/thumbnail/2024/11/01092018e22e876.webp?r=092143" alt="hello"
+                            class="News-Image">
+                        <p>Sikh separatists have been labeled as terrorists by India.</p>
+                    </div>
+                </div>
+            </td>
+            </tr>
+        </table>
+    </center>
+
+    <div class="finally">
+        <hr>
+
+        <img src="https://english.aaj.tv/_img/facebook.svg" alt="" class="bye-tags">
+        <img src="https://english.aaj.tv/_img/instagram.svg" alt="" class="bye-tags">
+        <img src="https://english.aaj.tv/_img/x.svg" alt="" class="bye-tags">
+        <img src="https://english.aaj.tv/_img/whatsapp.svg" alt="" class="bye-tags">
+        <p>
+            <a href="#">
+                Contact Us
+                |
+                Privacy Policy
+                |
+                About Us
+                |
+                Careers
+                |
+                Authors
+                |
+                Transmission
+                |
+                Aaj TV
+                |
+                Aaj Entertainment
+                |
+                Business Recorder
+                2024 © AAJ English TV. All Rights Reserved.
+        </p></a>
+    </div>
+</body>
+
+</html>

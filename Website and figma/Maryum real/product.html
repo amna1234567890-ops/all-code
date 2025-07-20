@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .product-section {
+      background-color: #ffe4ec; /* Light pink background */
+      padding: 40px 20px;
+    }
+
+    .product-title {
+      text-align: center;
+      font-size: 28px;
+      color: #ff4081; /* Bold pink */
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .product-card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      border-radius: 15px 15px 0 0;
+    }
+
+    .product-card-title {
+      font-size: 18px;
+      color: #ff4081; /* Pink color */
+      font-weight: bold;
+    }
+
+    .btn-buy {
+      background-color: #ff4081; /* Pink button */
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-buy:hover {
+      background-color: #e73370;
+    }
+
+    .mh{
+        object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-1" style="box-shadow: 1px 0px 10px  #ff69b4">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <h2><b>ℌ𝔢𝔵𝔅𝔩𝔲𝔯</b></h2>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"><i>Home</i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about.html"><i>About</i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contact.html"><i>Contact</i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="product.html"><i>Product</i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  <div class="product-section">
+    <h2 class="product-title">Our Products</h2>
+    <div class="container">
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card">
+            <img src="https://www.lorealparisusa.com/-/media/project/loreal/brand-sites/oap/americas/us/products/makeup/lip-color/lip-gloss/plump-ambition-hyaluron-lip-oil/cristal-clear-101/071249690345_t1-v3.png" class="card-img-top mh" alt="Product 1" height="300px" >
+            <div class="card-body text-center">
+              <h5 class="product-card-title">Product Name 1</h5>
+              <p class="card-text">$49.99</p>
+              <button class="btn-buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card">
+            <img src="https://calm-alpaca-1e9b89.netlify.app/MyFavBrush.png" class="card-img-top mh" alt="Product 2" height="300px">
+            <div class="card-body text-center">
+              <h5 class="product-card-title">Product Name 2</h5>
+              <p class="card-text">$59.99</p>
+              <button class="btn-buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card">
+            <img src="https://calm-alpaca-1e9b89.netlify.app/4thBrush.png" class="card-img-top mh" alt="Product 3" height="300px">
+            <div class="card-body text-center">
+              <h5 class="product-card-title">Product Name 3</h5>
+              <p class="card-text">$29.99</p>
+              <button class="btn-buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card">
+            <img src="https://www.lorealparisusa.com/-/media/project/loreal/brand-sites/oap/americas/us/products/makeup/eye/mascara/paradise-big-deal-mascara-black-waterproof/071249690987_t1.png" class="card-img-top mh" alt="Product 4" height="300px">
+            <div class="card-body text-center">
+              <h5 class="product-card-title">Product Name 4</h5>
+              <p class="card-text">$99.99</p>
+              <button class="btn-buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-section">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card">
+            <img src="https://www.lorealparisusa.com/-/media/project/loreal/brand-sites/oap/americas/us/products/makeup/lip-color/lip-gloss/plump-ambition-hyaluron-lip-oil/cristal-clear-101/071249690345_t1-v3.png" class="card-img-top mh" alt="Product 1" height="300px" >
+            <div class="card-body text-center">
+              <h5 class="product-card-title">Product Name 1</h5>
+              <p class="card-text">$49.99</p>
+              <button class="btn-buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card">
+            <img src="https://calm-alpaca-1e9b89.netlify.app/MyFavBrush.png" class="card-img-top mh" alt="Product 2" height="300px">
+            <div class="card-body text-center">
+              <h5 class="product-card-title">Product Name 2</h5>
+              <p class="card-text">$59.99</p>
+              <button class="btn-buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card">
+            <img src="https://calm-alpaca-1e9b89.netlify.app/4thBrush.png" class="card-img-top mh" alt="Product 3" height="300px">
+            <div class="card-body text-center">
+              <h5 class="product-card-title">Product Name 3</h5>
+              <p class="card-text">$29.99</p>
+              <button class="btn-buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card">
+            <img src="https://www.lorealparisusa.com/-/media/project/loreal/brand-sites/oap/americas/us/products/makeup/eye/mascara/paradise-big-deal-mascara-black-waterproof/071249690987_t1.png" class="card-img-top mh" alt="Product 4" height="300px">
+            <div class="card-body text-center">
+              <h5 class="product-card-title">Product Name 4</h5>
+              <p class="card-text">$99.99</p>
+              <button class="btn-buy">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

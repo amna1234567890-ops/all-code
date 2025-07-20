@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced E-Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /* Product display section */
+        .product-display {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            width: 300px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h3, h4 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+
+        .actions button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px; /* Smaller button padding */
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 12px; /* Smaller font size */
+            transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+        }
+
+
+        .actions button:hover {
+            background-color: #45a049;
+            transform: scale(1.05); 
+        }
+
+        .actions a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px; /* Could be more or less, depending on screen size */
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our E-Store</h1>
+    </header>
+    
+    <main>
+        <section class="product-display">
+            <div class="product-card">
+                <h3>Order & Buy More Things</h3>
+                <h4>Your Product</h4>
+                <p>This is a great product to buy! Add more products dynamically and explore more items.</p>
+                <img id="product-image" src="https://i.pinimg.com/236x/a1/84/5e/a1845e914635c49c8c4bc61e6ac5aeb0.jpg" alt="Product Image">
+                <div class="actions">
+                    <button id="buyNowBtn">oder now</button>
+                    <button>
+                        <a href="2nd.html">or go back and buy more Things</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal for Purchase Confirmation -->
+        <div id="purchaseModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Thank You!</h2>
+                <p>Your purchase has been confirmed.</p>
+                <button id="closeModalBtn">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Get modal elements
+        var modal = document.getElementById("purchaseModal");
+        var buyNowBtn = document.getElementById("buyNowBtn");
+        var closeBtn = document.getElementsByClassName("close")[0];
+        var closeModalBtn = document.getElementById("closeModalBtn");
+
+        // Show modal when the "Buy Now" button is clicked
+        buyNowBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Close modal when the "x" is clicked
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when the "Close" button is clicked
+        closeModalBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside of the modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

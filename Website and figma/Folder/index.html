@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            text-align: start;
+        }
+
+        .hug {
+            background-color: #343a40;
+            /* Example: Dark gray */
+            color: white;
+            /* Adjust the text color if needed */
+        }
+
+        
+
+        body {
+            background-image: url('Untitled.png');
+            /* Ensure this path is correct */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .light {
+            height: 20px;
+        }
+
+        .four-border {
+            border-bottom: 4px solid rgb(255, 196, 0);
+        }
+
+        .myv {
+            background-color: #43455a;
+ 
+        }
+
+        .row.g-5 {
+            gap: 1.5rem;
+            /* Space between columns and rows */
+        }
+
+        /* 
+        .container-fluid.bg-dark {
+            margin: 50px 20px;
+            width: 80%;
+            text-align: center;
+            background-color: #343a40;
+        } */
+
+        .fullmain {
+            margin-top: 0px;
+
+        }
+
+
+        .bb {
+            max-height: 500px;
+            object-fit: cover;
+
+        }
+
+        .pinknav {
+            color: white;
+        }
+
+        .bgy {
+            color: yellow;
+            border-radius: 50%;
+            padding: 10px;
+            background-color: #6c757d71;
+        }
+
+
+        .lastpart {
+            width: 170px;
+            margin: 10px 0px 10px 10px;
+        }
+
+
+        .bigtext {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .gty {
+            margin-bottom: 70px;
+            margin-top: -50px;
+        }
+
+        .ll {
+            margin-top: -40px;
+        }
+
+        .ds-no-m-ds-s {
+            display: none;
+        }
+
+        .color-yallow {
+            font-size: 3rem;
+            /* Adjust size as needed */
+            font-weight: bold;
+            color: goldenrod;
+            margin-top: 1rem;
+            /* Add spacing */
+        }
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+
+
+        .blue p {
+            font-size: 1.2rem;
+            margin: 5px 0;
+            color: #ccc;
+            margin-right: 20px;
+        }
+
+        .stat-number {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #ffcc00;
+        }
+        @media only screen and (max-width: 375px) {
+
+            /* Fixed missing px */
+            .ds-no-m-ds-s {
+                display: block;
+            }
+
+            .mylover {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="fullmain">
+        <!-- Navbar -->
+        <nav class="navbar hug navbar-expand-lg navbar-dark bg-dark">
+        
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="download-removebg-preview.png" alt="" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    Amna
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#">Portfolio</a>
+                        <a class="nav-link" href="#">project</a>
+                        <a class="nav-link" href="#">About US</a>
+                    </div>
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link" href="#"> <a href="#"><ion-icon class="pinknav"
+                                    name="logo-instagram"></ion-icon></a>
+                            <a class="nav-link" href="#"> <a href="#"><ion-icon class="pinknav"
+                                        name="logo-twitter"></ion-icon></a>
+                                <a class="nav-link" href="#"> <a href="#"><ion-icon class="pinknav"
+                                            name="logo-snapchat"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="ll">
+            <div class="container my-5 ">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center text-md-start">
+                        <h1 style="font-weight: lighter;">I'm</h1>
+                        <h1><samp class="four-border">Jame</samp>s Adams</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates distinctio maiores
+                            deleniti
+                            voluptatem earum.</p>
+                        <div class="col-md-4 text-center text-md-start ds-no-m-ds-s">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est velit sit rem et
+                                ut
+                                voluptate.</p>
+                            <a href="#"><ion-icon class="bgy" name="logo-twitter"></ion-icon></a>
+                            <a href="#"><ion-icon class="bgy" name="logo-facebook"></ion-icon></a>
+                            <a href="#"><ion-icon class="bgy" name="logo-instagram"></ion-icon></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="man_im-removebg-preview.png" alt="" class="img-fluid bb">
+                    </div>
+                    <div class="col-md-4 text-center text-md-start mylover">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est velit sit rem et ut
+                            voluptate.</p>
+                        <a href="#"><ion-icon class="bgy" name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon class="bgy" name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon class="bgy" name="logo-instagram"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container bg-dark text-white py-5 gty">
+            <div class="row justify-content-center align-items-center text-center gap-4">
+                <div class="col-6 col-md-2 py-2 myv d-flex flex-column align-items-center">
+                    <img src="meta.png" alt="" width="auto" height="40px">
+                </div>
+
+                <div class="col-6 col-md-2 py-2 myv d-flex flex-column align-items-center">
+                    <img src="google.png" alt="" width="auto" height="40px">
+                </div>
+                <div class="col-6 col-md-2 py-2 myv d-flex flex-column align-items-center">
+                    <img src="linkedn.png" alt="" width="auto" height="40px">
+                </div>
+                <div class="col-6 col-md-2 py-2 myv d-flex flex-column align-items-center">
+                    <img src="stack.png" alt="" width="auto" height="40px">
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col ms-5">
+                <h1>What Can I Do For <br>Your Needs</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam quae <br> cupiditate omnis adipisci
+                    Lorem ipsum dolor sit amet. Lorem, ipsum. <br> voluptate eos nobis doloribus? Porro natus iusto
+                    exercitationem sit
+                </p>
+                <!-- Added large Rs text -->
+                 
+                <div class="stats-container">
+                    <div class="blue">
+                        <p><span class="stat-number fs-1">250+</span> PROJECT</p>
+                        <p><span class="stat-number fs-1">120+</span> PROJECT</p>
+                    </div>
+                    <div class="blue">
+                        <p><span class="stat-number fs-1">302+</span> PROJECT</p>
+                        <p><span class="stat-number fs-1">170+</span> PROJECT</p>
+                    </div>
+                    
+                </div> 
+            </div>
+            <div class="col">
+                <div class="col lastt"><img
+                        src="https://i.insider.com/5728f2d7dd0895a1178b4584?width=1300&format=jpeg&auto=webp" alt=""
+                        class="lastpart">
+                    <span class="bigtext">UI/UX Designer</span>
+                    7+ project
+                    &rarr;;
+                </div>
+                <div class="col lastt"><img
+                    src="data:image/jpeg;base64,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" alt=""
+                    class="lastpart">
+                <span class="bigtext">UI/UX Designer</span>
+                7+ project
+                &rarr;;
+            </div>
+                <div class="col lastj"><img
+                        src="https://i.gadgets360cdn.com/large/google_pixelbook_go_1571156518741.jpg?downsize=950:*"
+                        alt="" class="lastpart">
+                    <span class="bigtext">UI/UX Designer</span>
+                    8+ project
+                    &rarr;
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

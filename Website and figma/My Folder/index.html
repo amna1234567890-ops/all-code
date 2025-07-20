@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href="https://assets.pokemon.com/static2/_ui/img/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=cruelty_free" />
+
+  <style>
+    body {
+      background-image: url(https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png);
+      text-transform: capitalize;
+    }
+
+    .bx-shad {
+      box-shadow: 2px 2px 10px black;
+    }
+
+    .btn {
+      padding-top: 10px;
+
+    }
+
+    .mybtn {
+      border-bottom: 7px solid red;
+      padding: 20px;
+
+    }
+
+    .mybtn:hover {
+      background-color: red;
+    }
+
+    .youbtn {
+      border-bottom: 7px solid rgb(255, 115, 0);
+      padding: 20px;
+    }
+
+    .youbtn:hover {
+      background-color: rgb(255, 115, 0);
+    }
+
+    .howbtn {
+      border-bottom: 7px solid rgb(0, 60, 255);
+      padding: 20px;
+    }
+
+    .howbtn:hover {
+      background-color: rgb(0, 60, 255);
+    }
+
+    .butbtn {
+      border-bottom: 7px solid rgb(0, 255, 221);
+      padding: 20px;
+    }
+
+    .butbtn:hover {
+      background-color: rgb(0, 255, 221);
+    }
+
+    .okbtn {
+      border-bottom: 7px solid rgb(30, 255, 0);
+      padding: 20px;
+    }
+
+    .okbtn:hover {
+      background-color: rgb(51, 255, 0);
+    }
+
+    .homebtn {
+      background-color: rgb(150, 150, 150);
+      padding: 20px;
+      color: rgb(0, 0, 0);
+      border-bottom:5px solid gray ;
+    }
+    .homebtn:hover {
+      background-color: gray;
+      padding: 20px;
+      color: white;
+      border-bottom:5px solid gray ;
+    }
+    .homebtn svg {
+    fill: white;
+}
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+    }
+
+    .card:hover {
+      border: none;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      
+    }
+    @keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-10px); /* Higher bounce */
+  }
+
+  40% {
+    transform: translateY(10px); /* Downward stretch */
+  }
+
+  100% {
+    transform: translateY(0); /* Back to original position */
+  }
+}
+.card {
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  animation: none; /* Default state */
+}
+
+.card:hover {
+  animation: bounce 1s ease; /* Full bounce animation */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Adds shadow for depth */
+} 
+
+        .footer {
+          color: white;
+            padding: 20px 0;
+            background-color: #222;
+        }
+        .footer .form-control, .footer .btn {
+            border-radius: 0;
+        }
+        .footer a {
+            color: #fff;
+        }
+        .footer .social-icons a {
+            margin-right: 10px;
+        }
+
+        .ml10{
+          margin-left: 10px !important; 
+        }
+
+        @media only screen and (max-width:992px){
+          .navbar{
+            background-color: #424242 !important;
+            color: white;
+          }
+          .navbar-toggler{
+            background-color: #fff;
+          }
+        }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container ">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link  bx-shad" href="#"><img
+              src="https://assets.pokemon.com/assets/cms2/img/misc/gus/buttons/logo-pokemon-79x45.png" alt=""></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"><img
+                  src="https://assets.pokemon.com/assets/cms2/img/misc/gus/buttons/logo-pokemoncenter-79x45.png"
+                  alt=""></a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img
+                src="https://assets.pokemon.com/assets/cms2/img/misc/gus/buttons/corporate-en.png" alt=""></a>
+          </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img
+                src="https://assets.pokemon.com/assets/cms2/img/misc/gus/promotions/tcg-175-en.png" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img
+                src="https://assets.pokemon.com/assets/cms2/img/misc/gus/promotions/scarlet-violet-175x50-en.jpg" alt=""></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img
+                src="https://assets.pokemon.com/assets/cms2/img/misc/gus/promotions/community-forums-175x50-en.png" alt=""></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="#"><button class=" homebtn btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M380-80q-75 0-127.5-52.5T200-260q0-35 17-64.5t63-75.5q6-6 11.5-12.5T306-430q-51-78-78.5-163.5T200-760q0-58 21-89t59-31q57 0 102 55t68 101q9 20 16.5 40.5T480-641q6-22 13.5-42.5T511-724q22-46 67-101t102-55q38 0 59 31t21 89q0 81-27.5 166.5T654-430q9 11 14.5 17.5T680-400q46 46 63 75.5t17 64.5q0 75-52.5 127.5T580-80q-45 0-72.5-10L480-100l-27.5 10Q425-80 380-80Zm0-80q23 0 46-5.5t43-16.5q-11-5-20-17t-9-21q0-8 11.5-14t28.5-6q17 0 28.5 6t11.5 14q0 9-9 21t-20 17q20 11 43 16.5t46 5.5q42 0 71-29t29-71q0-18-10-35t-30-34q-14-12-23-21t-29-34q-29-35-48-45.5T480-440q-41 0-60.5 10.5T372-384q-20 25-29 34t-23 21q-20 17-30 34t-10 35q0 42 29 71t71 29Zm40-130q-8 0-14-9t-6-21q0-12 6-21t14-9q8 0 14 9t6 21q0 12-6 21t-14 9Zm120 0q-8 0-14-9t-6-21q0-12 6-21t14-9q8 0 14 9t6 21q0 12-6 21t-14 9ZM363-489q11-8 25-14t31-11q-2-48-14.5-95.5T373-696q-19-40-42-67.5T285-799q-2 6-3.5 15.5T280-760q0 68 21.5 138T363-489Zm234 0q40-63 61.5-133T680-760q0-14-1.5-23.5T675-799q-23 8-46 35.5T587-696q-18 39-30.5 86.5T541-514q15 4 29 10.5t27 14.5Z"/></svg> <br> piku Home </button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="#"><button class=" mybtn btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-40-83v-40q-35-5-67.5-19T312-256l-28 29q33 26 72.5 42.5T440-163Zm80 0q44-5 83.5-21.5T676-227l-28-29q-28 20-60.5 34T520-203v40Zm-40-117q83 0 141.5-58.5T680-480q0-83-58.5-141.5T480-680q-83 0-141.5 58.5T280-480q0 83 58.5 141.5T480-280Zm253-4q26-33 42.5-72.5T797-440h-40q-5 35-19 67.5T704-312l29 28Zm-506 0 29-29q-20-28-34-60t-19-67h-40q5 44 21.5 83.5T227-284Zm253-36L360-480l120-160 120 160-120 160ZM163-520h40q5-35 19-67t34-60l-29-29q-26 33-42.5 72.5T163-520Zm594 0h40q-5-44-22-83.5T732-676l-28 28q20 28 34 60.5t19 67.5ZM313-704q28-20 60-34t67-19v-40q-44 5-83.5 21.5T284-733l29 29Zm335 0 28-28q-33-26-72.5-43T520-797v40q35 5 67.5 19t60.5 34Z"/></svg> <br>Animation</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="#"><button class="youbtn btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M160-240q-33 0-56.5-23.5T80-320v-320q0-33 23.5-56.5T160-720h640q33 0 56.5 23.5T880-640v320q0 33-23.5 56.5T800-240H160Zm0-80h640v-320H160v320Zm120-40h80v-80h80v-80h-80v-80h-80v80h-80v80h80v80Zm300 0q25 0 42.5-17.5T640-420q0-25-17.5-42.5T580-480q-25 0-42.5 17.5T520-420q0 25 17.5 42.5T580-360Zm120-120q25 0 42.5-17.5T760-540q0-25-17.5-42.5T700-600q-25 0-42.5 17.5T640-540q0 25 17.5 42.5T700-480ZM160-320v-320 320Z"/></svg> <br>Animation</button></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="#"><button class="howbtn btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m159-168-34-14q-31-13-41.5-45t3.5-63l72-156v278Zm160 88q-33 0-56.5-23.5T239-160v-240l106 294q3 7 6 13.5t8 12.5h-40Zm206-4q-32 12-62-3t-42-47L243-622q-12-32 2-62.5t46-41.5l302-110q32-12 62 3t42 47l178 488q12 32-2 62.5T827-194L525-84Zm-86-476q17 0 28.5-11.5T479-600q0-17-11.5-28.5T439-640q-17 0-28.5 11.5T399-600q0 17 11.5 28.5T439-560Zm58 400 302-110-178-490-302 110 178 490ZM319-650l302-110-302 110Z"/></svg> <br>Animation</button></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="#"><button class="okbtn btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m400-320 240-160-240-160v320Zm80 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-43 9-84.5t26-80.5l62 62q-8 26-12.5 51.5T160-480q0 134 93 227t227 93q134 0 227-93t93-227q0-134-93-227t-227-93q-27 0-52.5 4.5T377-783l-61-61q40-18 80-27t84-9q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80ZM220-680q-25 0-42.5-17.5T160-740q0-25 17.5-42.5T220-800q25 0 42.5 17.5T280-740q0 25-17.5 42.5T220-680Zm260 200Z"/></svg><br> Animation</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="#"><button class="butbtn btn"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-280h280v-80H240v80Zm400 0h80v-400h-80v400ZM240-440h280v-80H240v80Zm0-160h280v-80H240v80Zm-80 480q-33 0-56.5-23.5T80-200v-560q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v560q0 33-23.5 56.5T800-120H160Zm0-80h640v-560H160v560Zm0 0v-560 560Z"/></svg> <br> Animation</button></a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav >
+  <div class="container bg-light mt-4">
+    <div class="row">
+      <!-- Main Card -->
+      <div class="col-md-6 mb-3">
+        <div class="card ">
+          <img
+            src="https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/_tiles/sv/2024/artist-debuts/artist-debuts-169-en.png"
+            class="card-img-top" alt="Main Image">
+          <div class="card-body">
+            <h5 class="card-title">Meet the Artists That Made Their Pokémon TCG Debut in 2024</h5>
+            <p class="card-text">These artists are just getting started with the Pokémon TCG, but they're already making
+              their mark.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Side Cards -->
+      <div class="col-md-3">
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-12 mb-4 col-md-12 ">
+            <div class="card">
+              <img
+                src="https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/tcg-pocket/2025/01/08/pokemon-tcg-pocket-169-en.png"
+                class="card-img-top" alt="Card 1 Image">
+              <div class="card-body text-center">
+                <h6 class="card-title">A Quiz Is on the Horizons</h6>
+                <p class="card-text">Test your knowledge of Season 1 of Pokémon Horizons before Season 2 debuts.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-12 col-md-12">
+            <div class="card">
+              <img
+                src="https://www.pokemon.com/static-assets/content-assets/cms2/img/watch-pokemon-tv/_tiles/2025/pokemon-tv/pokemon-tv-169.png"
+                class="card-img-top" alt="Card 2 Image">
+              <div class="card-body text-center">
+                <h6 class="card-title">Watch Pokémon on YouTube</h6>
+                <p class="card-text">Watch Pokémon the Series on Pokémon TV on YouTube.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card" style="width: 22rem;">
+        <img
+          src="https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/tcg-pocket/strategy/mythical-island/top-cards/pokemon-tcg-pocket-169-en.png"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 22rem;">
+        <img
+          src="https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/strategy/scarlet-violet/regulation-set-g/scarlet-violet-169-en.png"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        </div>
+      </div>
+      <div class="card" style="width: 26rem;">
+        <img
+          src="https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/tcg-pocket/2025/01/08/pokemon-tcg-pocket-169-en.png"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container  bg-light  my-4">
+    <div class="row g-3 ">
+      <!-- Card 1 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="card h-100 " style="background-color: black; color: white;">
+          <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/172.png"
+            class="card-img-top mycardimg" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Miko Zinga</h5>
+            <p class="card-text"><small>Type: Flying<br>and Fire</small></p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="card h-100" style="background-color: black; color: white;">
+          <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/378.png"
+            class="card-img-top mycardimg" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Puro Fidol</h5>
+            <p class="card-text"><small>Type: Flying<br>and Fire</small></p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+
+      <!-- Card 4 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="card h-100" style="background-color: black; color: white;">
+          <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/251.png"
+            class="card-img-top mycardimg" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Zelon Fier</h5>
+            <p class="card-text"><small>Type: Flying<br>and Fire</small></p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="card h-100" style="background-color: black; color: white;">
+          <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/276.png"
+            class="card-img-top mycardimg" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Rento Blaze</h5>
+            <p class="card-text"><small>Type: Flying<br>and Fire</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="card h-100" style="background-color: black; color: white;">
+          <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/021.png"
+            class="card-img-top mycardimg" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Rento Blaze</h5>
+            <p class="card-text"><small>Type: Flying<br>and Fire</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="card h-100" style="background-color: black; color: white;">
+          <img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/913.png"
+            class="card-img-top mycardimg" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Rento Blaze</h5>
+            <p class="card-text"><small>Type: Flying<br>and Fire</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-4 bg-light">
+    <div class="row g-4">
+      <!-- Left Column -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+          <img
+            src="https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/_tiles/sv/sv8pt5/preview-cards/sv8pt5-preview-cards-1-169-en.png"
+            class="card-img-top" alt="Card Image">
+          <div class="card-body bg-warning text-dark">
+            <h5 class="card-title">Pokémon and Trainers Unite in Scarlet & Violet</h5>
+            <p class="card-text">Forge a bond of friendship to take on all challengers with Trainer’s Pokémon in the
+              upcoming Pokémon TCG expansion.</p>
+          </div>
+        </div>
+        <div class="card mt-4">
+          <img
+            src="https://www.pokemon.com/static-assets/content-assets/cms2/img/attend-events/_tiles/2025/tcg/rotation/2025-tcg-rotation-169-en.png"
+            class="card-img-top" alt="Card Image">
+          <div class="card-body bg-danger text-white">
+            <h5 class="card-title">Five Cards to Watch</h5>
+            <p class="card-text">Discover cards from the latest expansion that are sure to make an impact in battles.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Middle Column -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+          <img
+            src="https://www.pokemon.com/static-assets/content-assets/cms2/img/video-games/_tiles/tcg-pocket/strategy/mythical-island/gyarados-ex/pokemon-tcg-pocket-169-en.png"
+            class="card-img-top" alt="Card Image">
+          <div class="card-body bg-primary text-white">
+            <h5 class="card-title">2025 Pokémon TCG Standard Format Announcement</h5>
+            <p class="card-text">The Pokémon TCG Standard format rotation is coming soon—find out which cards are leaving
+              your favorite decks next year.</p>
+          </div>
+        </div>
+        <h1 class="mt-4">What's New Today 🐣</h1>
+        <div class="card mt-4">
+          <img
+            src="https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/_tiles/sv/sv09/announce/sv09-announce-169-en.png"
+            class="card-img-top" alt="Card Image">
+          <div class="card-body">
+            <h5 class="card-title">Pokémon TCG: Scarlet & Violet</h5>
+            <p class="card-text">Discover how to unlock the potential of Flareon ex and Regigigas VSTAR in Pokémon TCG
+              Live.</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Right Column -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card">
+          <img
+            src="https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/_tiles/sv/sv8pt5/preview-cards/sv8pt5-preview-cards-1-169-en.png"
+            class="card-img-top" alt="Card Image">
+          <div class="card-body bg-warning text-dark">
+            <h5 class="card-title">Pokémon and Trainers Unite in Scarlet & Violet</h5>
+            <p class="card-text">Forge a bond of friendship to take on all challengers with Trainer’s Pokémon in the
+              upcoming Pokémon TCG expansion.</p>
+          </div>
+        </div>
+        <div class="card mt-4">
+          <img
+            src="https://www.pokemon.com/static-assets/content-assets/cms2/img/attend-events/_tiles/2025/tcg/rotation/2025-tcg-rotation-169-en.png"
+            class="card-img-top" alt="Card Image">
+          <div class="card-body bg-danger text-white">
+            <h5 class="card-title">Five Cards to Watch</h5>
+            <p class="card-text">Discover cards from the latest expansion that are sure to make an impact in battles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer mt-auto">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <h5>Sign up for Pokémon emails!</h5>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <select class="form-control">
+                                <option>United States</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <input type="date" class="form-control" placeholder="Birthday">
+                        </div>
+                    </div>
+                    <div class="form-group mt-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkbox1">
+                            <label class="form-check-label" for="checkbox1">
+                                Pokémon video games, apps, and more
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkbox2">
+                            <label class="form-check-label" for="checkbox2">
+                                Pokémon Center (our official online shop)
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkbox3">
+                            <label class="form-check-label" for="checkbox3">
+                                I accept the Pokémon.com <a href="#">Terms of Use</a> and <a href="#">Privacy Notice</a>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h5>The Pokémon Company</h5>
+                <ul class="list-unstyled">
+                    <li class="ml10"><a href="#">News</a></li>
+                    <li class="ml10"><a href="#">Parents Guide</a></li>
+                    <li class="ml10"><a href="#">Customer Service</a></li>
+                    <li class="ml10"><a href="#">About Our Company</a></li>
+                    <li class="ml10"><a href="#">Careers</a></li>
+                    <li class="ml10"><a href="#">Select a Country/Region</a></li>
+                    <li class="ml10"><a href="#">Press Site</a></li>
+                </ul>
+                <div class="social-icons mt-3">
+                      <i class="fab fa-google"></i>
+                      <i class="fab fa-google-plus-g"></i>
+                      <i class="fab fa-youtube"></i>
+                      <i class="fab fa-instagram"></i>
+                      <i class="fab fa-pinterest"></i>
+              </div>
+              
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p>&copy;2025 Pokémon. &nbsp; <a href="#">Terms of Use</a> &nbsp; | &nbsp; <a href="#">Privacy Notice</a> &nbsp; | &nbsp; <a href="#">Cookie Page</a></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

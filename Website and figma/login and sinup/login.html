@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireFly</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            justify-content: center;
+            align-items: center;
+            border: 2px solid rgb(198, 182, 255);
+            background-color: rgb(182, 244, 255);
+            padding: 40px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Login Form</h2>
+        <hr>
+        <form action="/login" method="post">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required placeholder="enter your email"><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required placeholder="enter your Password"><br><br>
+
+            <input type="checkbox" id="remember" name="remember"required>
+            <label for="remember">Remember me</label><br><br>
+
+            <input type="checkbox" id="remember" name="remember" required>
+            <label for="remember">This Privacy Policy Is Meant To help you understand what 
+             Information we collect.</label><br><br>
+
+
+            <a href="#">
+                <p>Forgot password</p>
+            </a>
+
+            <button>Submit</button>
+
+        
+        <a href="index.html">create a account</a>
+</form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .navbar-custom {
+            background-color: #f5f5f7;
+            padding: 10px 0;
+        }
+    
+        .navbar-nav .nav-link {
+            color: #1d1d1f;
+            font-size: 15px;
+            padding: 8px 15px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+    
+        .navbar-nav .nav-link:hover {
+            color: #0071e3;
+        }
+    
+        /* Icons same size and aligned */
+        .navbar-nav .nav-link svg, 
+        .navbar-nav .nav-link i {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
+    
+        .navbar-nav {
+            gap: 10px; /* space between items */
+        }
+    
+        /* For Mobile Responsiveness */
+        @media (max-width: 991px) {
+            .navbar-nav {
+                text-align: center;
+            }
+        }
+
+        .iphone-card {
+        padding: 60px 20px;
+        border-radius: 20px;
+        margin: 30px auto;
+    }
+
+    .iphone-card h1 {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #1d1d1f;
+    }
+
+    .iphone-card h4 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: #6e6e73;
+    }
+
+    .iphone-card h5 {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 30px;
+        color: #1d1d1f;
+    }
+
+    .iphone-card .btn-primary {
+        background-color: #0071e3;
+        border: none;
+        padding: 10px 25px;
+        font-size: 16px;
+        margin: 10px 5px;
+        border-radius: 30px;
+    }
+
+    .iphone-card .btn-outline-primary {
+        border: 2px solid #0071e3;
+        color: #0071e3;
+        padding: 10px 25px;
+        font-size: 16px;
+        margin: 10px 5px;
+        border-radius: 30px;
+    }
+
+    .iphone-card img {
+        margin-top: 30px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero-section {
+      background-image: url(hero_md25__ca4cocy2qlv6_largetall\ \(1\).png); /* You can change this */
+      background-color: #f9f9fb;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .inner-content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .logo {
+      width: 150px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .btn-primary {
+      padding: 10px 25px;
+      font-size: 1.1rem;
+      border-radius: 25px;
+    }
+
+    .product-box {
+      background: linear-gradient(to bottom, #e9f4fb, #ffffff);
+      text-align: center;
+      padding: 40px 20px;
+      border-right: 2px solid white;
+      height: 100%;
+    }
+
+    .product-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .btn-custom {
+      border-radius: 30px;
+      margin: 5px;
+    }
+
+  
+    .row {
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .product-box {
+        border-right: none;
+        border-bottom: 2px solid white;
+      }
+    }
+
+
+    .hero-section {
+      background-image: url(hero_md25__ca4cocy2qlv6_largetall\ \(1\).png);
+      background-size: cover;
+      height: 60vh;
+    }
+
+    footer a {
+      color: #6c757d;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #343a40;
+      text-decoration: underline;
+    }
+
+    footer h6 {
+      color: #000;
+    }
+
+    .apple-info p {
+      font-size: 0.875rem;
+      color: #6c757d;
+    }
+
+    .gg{
+    font-size: 9rem;
+    background: linear-gradient(90deg, rgba(29, 137, 248, 1) 0%, rgba(205, 108, 222, 1) 50%, rgba(244, 126, 119, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-brands fa-apple"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mac</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">iPad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">watch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Vision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Air Pod</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tv & Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Entertainment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                <path
+                                    d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                            </svg></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                <path
+                                    d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z" />
+                            </svg></a>
+                    </li>
+                </ul>   
+            </div>
+        </div>
+    </nav>
+
+<!-- ====================CARD iPHONE AND IMAGE====================== -->
+
+<div class="container text-center iphone-card">
+    <h1>iPhone</h1>
+    <h4>Meet the iPhone 16 Family</h4>
+    <button class="btn btn-primary">Learn More</button>
+    <button class="btn btn-outline-primary">Shop iPhone</button>
+    <h5>Built for Apple Intelligence.</h5>
+    <img src="iPhone.png" alt="iPhone Image" class="img-fluid">
+</div>
+
+<!-- ==========================2ND CARD WITH WATCH IMAGE============================ -->
+
+<div class="container text-center iphone-card">
+   <img src="hero_logo_apple_watch_series_10__dla4dkv1wfue_largetall.png" alt="">
+    <h4>Thinstant classic.</h4>
+    <button class="btn btn-primary">Learn More</button>
+    <button class="btn btn-outline-primary">Buy</button> <br>
+    <img src="watch-removebg-preview.png" alt="iPhone Image" class="img-fluid" width="2800px">
+</div>
+
+ <!-- Background Container -->
+ <div class="container-fluid hero-section">
+
+    <!-- Centered Content Container -->
+    <div class="container inner-content">
+      <img src="llllllogog.png" alt="Mother's Day Apple Logo" class="logo">
+
+      <h1 class="gg">Mother’s Day</h1>
+      <p>It's not too late to find the perfect gift for Mom.</p>
+      <a href="#" class="btn btn-primary">Shop</a>
+    </div>
+
+  </div>
+
+
+  
+  <div class="container-fluid px-0 mt-5">
+    <div class="row gx-0">
+      
+      <!-- MacBook Air -->
+      <div class="col-md-6 product-box mb-5">
+        <h2><strong>MacBook Air</strong></h2>
+        <p>Sky blue color.<br>Sky high performance with M4.</p>
+        <div>
+          <a href="#" class="btn btn-primary btn-custom">Learn more</a>
+          <a href="#" class="btn btn-outline-primary btn-custom">Buy</a>
+        </div>
+        <img src="Screenshot_Capture_-_2025-05-04_-_21-23-14-removebg-preview.png" alt="MacBook Air" class="product-image mt-4">
+        <p class="rainbow-text">Built for Apple Intelligence.</p>
+      </div>
+
+      <!-- iPad Air -->
+      <div class="col-md-6 product-box mb-5">
+        <h2><strong>iPad <span style="color:#2b7fdd">air</span></strong></h2>
+        <p>Now supercharged by the M3 chip.</p>
+        <div>
+          <a href="#" class="btn btn-primary btn-custom">Learn more</a>
+          <a href="#" class="btn btn-outline-primary btn-custom">Buy</a>
+        </div>
+        <img src="Screenshot_Capture_-_2025-05-04_-_21-23-14-removebg-preview.png" alt="iPad Air" class="product-image mt-4">
+        <p class="rainbow-text">Built for Apple Intelligence.</p>
+      </div>
+      <div class="col-md-6 product-box mb-5">
+        <h2><strong>MacBook Air</strong></h2>
+        <p>Sky blue color.<br>Sky high performance with M4.</p>
+        <div>
+          <a href="#" class="btn btn-primary btn-custom">Learn more</a>
+          <a href="#" class="btn btn-outline-primary btn-custom">Buy</a>
+        </div>
+        <img src="Screenshot_Capture_-_2025-05-04_-_21-23-14-removebg-preview.png" alt="MacBook Air" class="product-image mt-4">
+        <p class="rainbow-text">Built for Apple Intelligence.</p>
+      </div>
+
+      <!-- iPad Air -->
+      <div class="col-md-6 product-box mb-5">
+        <h2><strong>iPad <span style="color:#2b7fdd">air</span></strong></h2>
+        <p>Now supercharged by the M3 chip.</p>
+        <div>
+          <a href="#" class="btn btn-primary btn-custom">Learn more</a>
+          <a href="#" class="btn btn-outline-primary btn-custom">Buy</a>
+        </div>
+        <img src="Screenshot_Capture_-_2025-05-04_-_21-23-14-removebg-preview.png" alt="iPad Air" class="product-image mt-4">
+        <p class="rainbow-text">Built for Apple Intelligence.</p>
+      </div>
+
+
+      
+    </div>
+  </div>
+
+
+<!-- Top Informational Text -->
+  <section class="bg-light py-3 border-bottom apple-info">
+    <div class="container">
+        <p>1. Hearing Aid and Hearing Test: The Hearing Aid feature has received FDA authorization. The Hearing Test and Hearing Aid features are supported on AirPods Pro 2 with the latest firmware paired with a compatible iPhone or iPad with iOS 18 or iPadOS 18 and later and are intended for people 18 years old or older. The Hearing Aid feature is also supported on a compatible Mac with macOS Sequoia and later. It is intended for people with perceived mild to moderate hearing loss.
+            <br>
+            Hearing Protection: The Hearing Protection feature works with AirPods Pro 2 with the latest firmware when paired with a compatible iPhone, iPad, or Mac with iOS 18, iPadOS 18, or macOS Sequoia and later. Feature is only available in the U.S. and Canada. See support.apple.com/120850 for total attenuation and more information. The Hearing Protection feature is not suitable for protection against extremely loud impulse sounds, such as gunfire, fireworks, or jackhammers, or against sustained sounds louder than 110 dBA. <br>
+            2. AT&T iPhone 16 Special Deal: Monthly price (if shown) reflects net monthly payment, after application of AT&T trade-in credit applied over 36 months with purchase of an iPhone 16 Pro, iPhone 16 Pro Max, or iPhone 16, and trade-in of eligible smartphone. Receive credit with purchase of an iPhone 16 Pro or iPhone 16 Pro Max of either $1000, $830, or $350 (based upon the model and condition of your trade-in smartphone). Receive credit with purchase of an iPhone 16 of either $800 or $350 (based upon the model and condition of your trade-in smartphone). Max bill credits will not exceed the cost of the device. Requires upgrade of an existing line or activation of a new line and purchase of a new iPhone 16 Pro, iPhone 16 Pro Max, or iPhone 16, on qualifying 36 month 0% APR installment plan, subject to carrier credit qualification. Customers purchasing this offer through Apple cannot add the Next Up Anytime option. $0 down for well qualified customers only, or down payment may be required and depends on a variety of factors. Tax on full retail price due at sale. Requires activation on eligible AT&T unlimited plan. AT&T may temporarily slow data speeds if the network is busy. If you cancel eligible wireless service, credits will stop and you will owe the remaining device balance. Activation/Upgrade Fee: $35. Trade in device may not be on existing installment plan. Bill credits are applied as a monthly credit over the 36 month installment plan. Credits start within 3 bills. Will receive catchup credits once credits start. Wireless line must be on an installment agreement, active, and in good standing for 30 days to qualify. Installment agreement starts when device is shipped. To get all credits, device must remain on agreement for entire term and you must keep eligible service on device for entire installment term. Limited time offer; subject to change. Limits: one trade-in per qualifying purchase and one credit per line. May not be combinable with other offers, discounts, or credits. Purchase, financing, other limits, and restrictions apply. Price for iPhone 16 and iPhone 16 Plus includes $30 AT&T connectivity discount. Activation required. <br>
+            Boost Mobile iPhone 16 Special Deal: Buy an iPhone 16 Pro, iPhone 16 Pro Max, iPhone 16, or iPhone 16 Plus and get $1000 in bill credits (not to exceed the cost of the iPhone) applied over 36 months. No trade-in required. If you are trading in a device with this deal, trade-in value will be applied as additional bill credits over 36 months. Monthly price (if shown) reflects net monthly payment, after application of $1000 in bill credit (not to exceed the cost of the iPhone purchased) and trade-in credit (if applicable) applied over 36 months respectively. Requires activation of a new line, Boost Mobile Infinite Access plan and purchase on qualifying 36-month 0% APR installment plan, subject to carrier credit qualification. After making 12 installment payments, you may upgrade to a new iPhone and get up to $1000 in bill credits (not to exceed the cost of the iPhone) applied over 36 months for the new iPhone on the Infinite Access plan and purchase on new qualifying 36-month 0% APR installment plan, subject to carrier credit qualification. Tax on full retail price due at sale. If you cancel eligible wireless service, credits will stop and you will owe the remaining device balance. Bill credits are applied as a monthly credit over the 36-month installment plan. Trade-in credits start within 3 bills. Installment agreement starts when device is shipped. To get all credits, device must remain on agreement for entire term and you must keep eligible service on device for entire installment term. Limited-time offer; subject to change. Limits: one credit per line. May not be combined with other offers, discounts, or credits. Purchase, financing, other limits, and restrictions apply. Price for iPhone 16 and iPhone 16 Plus includes $30 Boost Mobile connectivity discount. Activation required.
+            <br>
+            T‑Mobile iPhone 16 Special Deal: Monthly price (if shown) reflects net monthly payment, after application of T‑Mobile trade-in credit applied over 24 months with purchase of an iPhone 16 Pro, iPhone 16 Pro Max, iPhone 16, or iPhone 16 Plus and trade-in of eligible smartphone.
+            <br>
+            Existing customers: Receive credit with purchase of an iPhone 16 Pro, iPhone 16 Pro Max, iPhone 16, or iPhone 16 Plus (based upon the model and condition of your trade-in smartphone) of $1000, $800, or $400 for customers on a Go5G Next plan (excluding 55, Military, First Responder plans); or $800 or $400 for customers on a Go5G Plus plan (excluding 55, Military, First Responder plans); or $800, $600, or $300 for customers on a Go5G Next 55, Military, or First Responder plan; or $600 or $300 for customers on a Go5G Plus 55, Military, or First Responder plan; or $500 or $250 for customers on a Go5G, Magenta/MAX, or Essentials plan. Must be an existing T‑Mobile customer.
+            <br>
+            New or Add-a-Line customers: Receive credit with purchase of an iPhone 16 Pro, iPhone 16 Pro Max, iPhone 16, or iPhone 16 Plus (based upon the model and condition of your trade-in smartphone) of $1000, $800, or $400 for customers on a Go5G Next plan (excluding 55, Military, First Responder plans); or $800 or $400 for customers on a Go5G Plus plan (excluding 55, Military, First Responder plans); or $800, $600, or $300 for customers on a Go5G Next 55, Military, or First Responder plan; or $600 or $300 for customers on a Go5G Plus 55, Military, or First Responder plan; or $800 or $400 for customers on an Essentials, Simple Choice, TMO ONE/Plus, Magenta/MAX or Go5G plan (excluding 55, Military, First Responder plans); or $600 or $300 for customers on an Essentials 55 Choice, TMO ONE/Plus, Magenta/MAX & Go5G 55, Military, or First Responder plan. Must be a new T‑Mobile customer or adding a new line to an existing T‑Mobile account.
+            <br>
+            Max bill credits will not exceed the cost of the device. Credit comprised of (i) Apple instant trade-in credit at checkout and (ii) T‑Mobile monthly bill credits applied over 24 months. Allow 2 bill cycles from valid submission and validation of trade-in. Tax on pre-credit price due at sale. Limited-time offer; subject to change. Qualifying credit, data plan, and trade-in in good condition required. Max 4 promotional offers on any iPhone per account. May not be combinable with some offers or discounts. Activation required. Contact T‑Mobile before cancelling service to continue remaining bill credits on current device, or credits stop & balance on required finance agreement is due.
+            <br>
+            Verizon iPhone 16 Special Deal: Monthly price (if shown) reflects net monthly payment, after application of Verizon trade-in credit applied over 36 months with purchase of an iPhone 16 Pro, iPhone 16 Pro Max, iPhone 16, or iPhone 16 Plus.
+            <br>
+            Existing customers: Customers on an Unlimited Ultimate plan receive $830 credit (based upon the model and condition of your trade-in smartphone) with purchase of an iPhone 16 Pro, iPhone 16 Pro Max, iPhone 16, or iPhone 16 Plus. Customers on an Unlimited Plus plan receive $415 credit (based upon the model and condition of your trade-in smartphone) with purchase of an iPhone 16 Pro, iPhone 16 Pro Max, iPhone 16, or iPhone 16 Plus. Must be an existing Verizon customer.
+            <br>
+            New or Add-a-Line customers: Customers on an Unlimited Ultimate plan receive $830 credit (based upon the model and condition of your trade-in smartphone) with purchase of an iPhone 16 Pro, iPhone 16 Pro Max, iPhone 16, or iPhone 16 Plus. Customers on an Unlimited Plus plan receive $830 credit (based upon the model and condition of your trade-in smartphone) with purchase of an iPhone 16 Pro, iPhone 16 Pro Max, iPhone 16, or iPhone 16 Plus. Customers on an Unlimited Welcome plan receive $830 credit (based upon the model and condition of your trade-in smartphone) with purchase of an iPhone 16 Pro, iPhone 16 Pro Max, iPhone 16, or iPhone 16 Plus. Must be a new Verizon customer or adding a new line to an existing Verizon account.
+            <br>
+            Max bill credits will not exceed the cost of the device. Credit comprised of (i) Apple instant trade-in credit at checkout and (ii) Verizon monthly bill credits applied over 36 months. Customer must remain in the Verizon Device Payment Program for 36 months to receive the full benefit of the Verizon bill credits. Bill credits may take 1-2 bill cycles to appear. If it takes two cycles for bill credits to appear, you'll see the credit for the first cycle on your second bill in addition to that month's credit. Requires purchase and activation of a new iPhone 16 Pro, iPhone 16 Pro Max, iPhone 16, or iPhone 16 Plus with the Verizon Device Payment Program at 0% APR for 36 months, subject to carrier credit qualification, and iPhone availability and limits. Taxes and shipping not included in monthly price. Sales tax may be assessed on full value of new iPhone. Requires eligible unlimited service plan. Requires trade-in of eligible device in eligible condition. Must be at least 18 to trade-in. Apple or its trade-in partners reserve the right to refuse or limit any trade-in transaction for any reason. In-store trade-in requires presentation of a valid, government-issued photo ID (local law may require saving this information). In-store promotion availability subject to local law; speak to a Specialist to learn more. Limited-time offer; subject to change. Additional terms from Apple, Verizon, and Apple's trade-in partners may apply. Price for iPhone 16 and iPhone 16 Plus includes $30 Verizon connectivity discount. Activation required.
+            <br>
+            AT&T iPhone 15 Special Deal: Buy an iPhone 15 128 GB and get $513.36 in bill credits applied over 36 months. Buy an iPhone 15 256 GB and get $433.36 in bill credits applied over 36 months. Buy an iPhone 15 512 GB and get $453.36 in bill credits applied over 36 months. Requires upgrade of an existing line (or activation of a new line) and purchase on qualifying 36-month 0% APR installment plan, subject to carrier credit qualification. $0 down for well-qualified customers only, or down payment may be required and depends on a variety of factors. Tax on full retail price due at sale. Requires activation on eligible AT&T unlimited plan. AT&T may temporarily slow data speeds if the network is busy. If you cancel eligible wireless service, credits will stop and you will owe the remaining device balance. Activation/Upgrade Fee: $35. Bill credits are applied as a monthly credit over the 36-month installment plan. Credits start within 3 bills. Will receive catch-up credits once credits start. Wireless line must be on an installment agreement, active, and in good standing for 30 days to qualify. Installment agreement starts when device is shipped. To get all credits, device must remain on agreement for entire term and you must keep eligible service on device for entire installment term. Limited-time offer; subject to change. Limits: one credit per line. May not be combinable with other offers, discounts, or credits. Purchase, financing, other limits, and restrictions apply. Activation required.
+            <br>
+            T‑Mobile iPhone 15 Special Deal: Monthly price (if shown) reflects net monthly payment, after application of T‑Mobile trade-in credit applied over 24 months with purchase of an iPhone 15 or iPhone 15 Plus and trade-in of eligible smartphone.
+            <br>
+            Existing customers: Receive credit with purchase of an iPhone 15 or iPhone 15 Plus (based upon the model and condition of your trade-in smartphone) of $1000, $800, or $400 for customers on a Go5G Next plan (excluding 55, Military, First Responder plans); or $800 or $400 for customers on a Go5G Plus plan (excluding 55, Military, First Responder plans); or $800, $600, or $300 for customers on a Go5G Next 55, Military, or First Responder plan; or $600 or $300 for customers on a Go5G Plus 55, Military, or First Responder plan; or $500 or $250 for customers on a Go5G, Magenta/MAX, or Essentials plan. Must be an existing T‑Mobile customer.
+            <br>
+            New or Add-a-Line customers: Receive credit with purchase of an iPhone 15 or iPhone 15 Plus (based upon the model and condition of your trade-in smartphone) of $1000, $800, or $400 for customers on a Go5G Next plan (excluding 55, Military, First Responder plans); or $800 or $400 for customers on a Go5G Plus plan (excluding 55, Military, First Responder plans); or $800, $600, or $300 for customers on a Go5G Next 55, Military, or First Responder plan; or $600 or $300 for customers on a Go5G Plus 55, Military, or First Responder plan; or $800 or $400 for customers on an Essentials, Simple Choice, TMO ONE/Plus, Magenta/MAX or Go5G plan (excluding 55, Military, First Responder plans); or $600 or $300 for customers on an Essentials 55 Choice, TMO ONE/Plus, Magenta/MAX & Go5G 55, Military, or First Responder plan. Must be a new T‑Mobile customer or adding a new line to an existing T‑Mobile account.
+            <br>
+            Max bill credits will not exceed the cost of the device. Credit comprised of (i) Apple instant trade-in credit at checkout and (ii) T‑Mobile monthly bill credits applied over 24 months. Allow 2 bill cycles from valid submission and validation of trade-in. Tax on pre-credit price due at sale. Limited-time offer; subject to change. Qualifying credit, data plan, and trade-in in good condition required. Max 4 promotional offers on any iPhone per account. May not be combinable with some offers or discounts. Activation required. Contact T‑Mobile before cancelling service to continue remaining bill credits on current device, or credits stop & balance on required finance agreement is due.
+            <br>
+            T-Mobile iPhone 14 Special Deal: Monthly price (if shown) reflects net monthly payment, after application of T-Mobile trade-in credit applied over 24 months with purchase of an iPhone 14 or iPhone 14 Plus and trade-in of eligible smartphone. Receive credit with purchase of an iPhone 14 or 14 Plus of $800 or $400 for customers on a Go5G Next or Go5G Plus plan (based upon the model and condition of your trade-in smartphone); or $300 or $150 for customers on a Go5G, TMO ONE, TMO ONE Plus, Magenta, Magenta MAX, or Magenta Plus plan (based upon the model and condition of your trade-in smartphone). Offer excludes customers on Go5G Next First Responder, Go5G Plus First Responder, Go5G Next Military, Go5G Plus Military, Go5G Next 55, and Go5G Plus 55 plans. Max bill credits will not exceed the cost of the device. Credit comprised of (i) Apple instant trade-in credit at checkout and (ii) T-Mobile monthly bill credits applied over 24 months. Allow 2 bill cycles from valid submission and validation of trade-in. Tax on pre-credit price due at sale. Limited-time offer; subject to change. Qualifying credit, data plan, and trade-in in good condition required. Max 4 promotional offers on any iPhone per account. May not be combinable with some offers or discounts. Price for iPhone 14 and iPhone 14 Plus includes $30 T-Mobile connectivity discount. Activation required. Contact T-Mobile before cancelling service to continue remaining bill credits on current device, or credits stop & balance on required finance agreement is due.
+            <br>
+            AT&T iPhone SE Special Deal: Buy an iPhone SE 64 GB and get $358.36 in bill credits applied over 36 months. Buy an iPhone SE 128 GB and get $264.36 in bill credits applied over 36 months. Buy an iPhone SE 256 GB and get $184.36 in bill credits applied over 36 months. Requires upgrade of an existing line (or activation of a new line) and purchase on qualifying 36-month 0% APR installment plan, subject to carrier credit qualification. $0 down for well-qualified customers only, or down payment may be required and depends on a variety of factors. Tax on full retail price due at sale. Requires activation on eligible AT&T unlimited plan. AT&T may temporarily slow data speeds if the network is busy. If you cancel eligible wireless service, credits will stop and you will owe the remaining device balance. Activation/Upgrade Fee: $35. Bill credits are applied as a monthly credit over the 36-month installment plan. Credits start within 3 bills. Will receive catch-up credits once credits start. Wireless line must be on an installment agreement, active, and in good standing for 30 days to qualify. Installment agreement starts when device is shipped. To get all credits, device must remain on agreement for entire term and you must keep eligible service on device for entire installment term. Limited-time offer; subject to change. Limits: one credit per line. May not be combinable with other offers, discounts, or credits. Purchase, financing, other limits, and restrictions apply. Activation required.
+            <br>
+            T-Mobile iPhone SE 3 Special Deal: Monthly price (if shown) reflects net monthly payment, after application of T-Mobile trade-in credit applied over 24 months with purchase of an iPhone SE 3 and trade-in of eligible smartphone. Receive credit with purchase of an iPhone SE 3 of $579 or $400 for customers on a Go5G Next or Go5G Plus plan (based upon the model and condition of your trade-in smartphone); or $300 or $150 for customers on a Go5G, TMO ONE, TMO ONE Plus, Magenta, Magenta MAX, or Magenta Plus plan (based upon the model and condition of your trade-in smartphone). Offer excludes customers on Go5G Next First Responder, Go5G Plus First Responder, Go5G Next Military, Go5G Plus Military, Go5G Next 55, and Go5G Plus 55 plans. Max bill credits will not exceed the cost of the device. Credit comprised of (i) Apple instant trade-in credit at checkout and (ii) T-Mobile monthly bill credits applied over 24 months. Allow 2 bill cycles from valid submission and validation of trade-in. Tax on pre-credit price due at sale. Limited-time offer; subject to change. Qualifying credit, data plan, and trade-in in good condition required. Max 4 promotional offers on any iPhone per account. May not be combinable with some offers or discounts. Activation required. Contact T-Mobile before cancelling service to continue remaining bill credits on current device, or credits stop & balance on required finance agreement is due.
+            <br>
+            3. Trade‑in values will vary based on the condition, year, and configuration of your eligible trade‑in device. Not all devices are eligible for credit. You must be at least the age of majority to be eligible to trade in for credit or for an Apple Gift Card. Trade‑in value may be applied toward qualifying new device purchase, or added to an Apple Gift Card. Actual value awarded is based on receipt of a qualifying device matching the description provided when estimate was made. Sales tax may be assessed on full value of a new device purchase. In‑store trade‑in requires presentation of a valid photo ID (local law may require saving this information). Offer may not be available in all stores, and may vary between in‑store and online trade‑in. Some stores may have additional requirements. Apple or its trade‑in partners reserve the right to refuse, cancel, or limit quantity of any trade‑in transaction for any reason. More details are available from Apple’s trade-in partner for trade‑in and recycling of eligible devices. Restrictions and limitations may apply.
+            To access and use all Apple Card features and products available only to Apple Card users, you must add Apple Card to Wallet on an iPhone or iPad that supports and has the latest version of iOS or iPadOS. Apple Card is subject to credit approval, available only for qualifying applicants in the United States, and issued by Goldman Sachs Bank USA, Salt Lake City Branch.
+            If you reside in the U.S. territories, please call Goldman Sachs at 877-255-5923 with questions about Apple Card. <br>
+            Learn more about how Apple Card applications are evaluated at support.apple.com/kb/HT209218.
+            Apple Intelligence is available in beta on all iPhone 16 models, iPhone 15 Pro, iPhone 15 Pro Max, iPad mini (A17 Pro), and iPad and Mac models with M1 and later, with Siri and device language set to Chinese (Simplified), English (Australia, Canada, India, Ireland, New Zealand, Singapore, South Africa, UK, or U.S.), French, German, Italian, Japanese, Korean, Portuguese (Brazil), or Spanish, as part of an iOS 18, iPadOS 18, and macOS Sequoia software update, with more languages coming over the course of the year, including Vietnamese. Some features may not be available in all regions or languages.</p>
+      <p>
+        Learn more about how Apple Card applications are evaluated at 
+        <a href="https://support.apple.com/kb/HT209218" target="_blank">support.apple.com/kb/HT209218</a>.
+      </p>
+      <p>
+        Apple Intelligence is available in beta on all iPhone 16 models, iPhone 15 Pro, iPhone 15 Pro Max, iPad mini (A17 Pro), and iPad and Mac models with M1 and later...
+      </p>
+      <p>
+        A subscription is required for Apple Arcade, Apple Fitness+, Apple Music, and Apple TV+.
+      </p>
+      <p>
+        Features are subject to change. Some features, applications, and services may not be available in all regions or all languages.
+      </p>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-light pt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <h6>Shop and Learn</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Vision</a></li>
+            <li><a href="#">AirPods</a></li>
+            <li><a href="#">TV & Home</a></li>
+            <li><a href="#">AirTag</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6>Apple Wallet</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Wallet</a></li>
+            <li><a href="#">Apple Card</a></li>
+            <li><a href="#">Apple Pay</a></li>
+            <li><a href="#">Apple Cash</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6>Account</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Manage Your Apple Account</a></li>
+            <li><a href="#">Apple Store Account</a></li>
+            <li><a href="#">iCloud.com</a></li>
+          </ul>
+          <h6 class="mt-3">Entertainment</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Apple One</a></li>
+            <li><a href="#">Apple TV+</a></li>
+            <li><a href="#">Apple Music</a></li>
+            <li><a href="#">Apple Arcade</a></li>
+            <li><a href="#">Apple Fitness+</a></li>
+            <li><a href="#">Apple News+</a></li>
+            <li><a href="#">Apple Podcasts</a></li>
+            <li><a href="#">Apple Books</a></li>
+            <li><a href="#">App Store</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6>Apple Store</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Find a Store</a></li>
+            <li><a href="#">Genius Bar</a></li>
+            <li><a href="#">Today at Apple</a></li>
+            <li><a href="#">Apple Camp</a></li>
+            <li><a href="#">Apple Store App</a></li>
+            <li><a href="#">Certified Refurbished</a></li>
+            <li><a href="#">Apple Trade In</a></li>
+            <li><a href="#">Financing</a></li>
+            <li><a href="#">Carrier Deals</a></li>
+            <li><a href="#">Order Status</a></li>
+            <li><a href="#">Shopping Help</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6>For Business</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Apple and Business</a></li>
+            <li><a href="#">Shop for Business</a></li>
+          </ul>
+          <h6 class="mt-3">For Education</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Apple and Education</a></li>
+            <li><a href="#">Shop for K-12</a></li>
+            <li><a href="#">Shop for College</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h6>Apple Values</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Environment</a></li>
+            <li><a href="#">Inclusion and Diversity</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Racial Equity and Justice</a></li>
+            <li><a href="#">Supply Chain</a></li>
+          </ul>
+          <h6 class="mt-3">About Apple</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="#">Leadership</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact Apple</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr>
+      <div class="text-center small text-muted pb-3">
+        &copy; 2025 Apple Inc. All rights reserved. | 
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Use</a> | 
+        <a href="#">Sales and Refunds</a> | 
+        <a href="#">Legal</a> | 
+        <a href="#">Site Map</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
